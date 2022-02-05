@@ -1,9 +1,9 @@
 import { renderComponents } from '@nextful/packages/module-connector';
-import { Article as ArticleType } from '@nextful/types/index';
+import * as Styled from './styles';
 import Modules from '@nextful/modules/mapping';
 
-const Article = ({ modulesCollection }: ArticleType) => {
-    return <>{renderComponents(modulesCollection.items, Modules)}</>;
+const Article = ({ modulesCollection, greyBackground }: any) => {
+    return <Styled.Container greyBackground={greyBackground}>{renderComponents(modulesCollection.items, Modules)}</Styled.Container>;
 };
 
 export default Article;
