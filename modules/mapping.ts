@@ -1,3 +1,4 @@
 import { Module as ModuleText } from './ModuleText';
+import { Module as ModuleImageText } from './ModuleImageText';
 
-export default [ModuleText];
+export default [ModuleText, ModuleImageText];

@@ -8,7 +8,7 @@ export const Inner = styled.div`
     padding: 40px 20px;
 
     ${up('xl')} {
-        padding: 100px 0;
+        padding: 50px 0;
         width: ${({ theme }) => theme.maxWidth}px;
         margin: 0 auto;
         display: flex;
@@ -16,14 +16,16 @@ export const Inner = styled.div`
 `;
 
 export const Box = styled.div`
-    flex: 1;
+    ${up('xl')} {
+        flex: 1;
 
-    &:first-child {
-        padding-right: 40px;
-    }
+        &:first-child {
+            padding-right: 40px;
+        }
 
-    &:last-child {
-        padding-left: 40px;
+        &:last-child {
+            padding-left: 40px;
+        }
     }
 `;
 
