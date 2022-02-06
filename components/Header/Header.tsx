@@ -29,7 +29,7 @@ const Header = ({ mainNavigation }: any) => {
                     </Styled.MobileNavigation>
 
                     <Styled.LogoLink href='/'>
-                        <Styled.Logo open={open}>Kaizen</Styled.Logo>
+                        <Styled.Logo open={open} src='/logo.svg' />
                     </Styled.LogoLink>
 
                     <Styled.DesktopNavigation>

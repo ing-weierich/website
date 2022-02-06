@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { colors } from './theme';
+import { colors, fonts } from './theme';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Cabin', sans-serif;
+    font-family: ${fonts.normal};
     background-color: ${colors.white};
     color: ${colors.black};
   }
@@ -28,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     font-size: 20px;
     line-height: 32px;
+    color: rgba(1, 16, 25, 0,87);
   }
 `;
 

@@ -9,7 +9,7 @@ export const MobileNavigation = styled.nav<{ open: boolean }>`
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: ${({ theme }) => theme.colors.darkBlue};
+    background-color: ${({ theme }) => theme.colors.blue};
     z-index: 2;
     transition: transform 0.5s ease;
     transform: translateY(${({ open }) => (open ? '0' : '-100%')});
@@ -82,19 +82,20 @@ export const Inner = styled.div`
     ${up('xl')} {
         width: ${({ theme }) => theme.maxWidth}px;
         margin: 0 auto;
-        height: 80px;
+        height: 136px;
         padding: 0;
     }
 `;
 
 export const LogoLink = styled(link)``;
 
-export const Logo = styled.div<{ open: boolean }>`
-    font-size: 24px;
-    font-family: ${({ theme }) => theme.fonts.headlines};
-    text-transform: uppercase;
-    z-index: 3;
-    color: ${({ theme, open }) => (open ? theme.colors.white : theme.colors.black)};
+export const Logo = styled.img<{ open: boolean }>`
+    width: 50px;
+    height: auto;
+
+    ${up('xl')} {
+        width: 80px;
+    }
 `;
 
 export const BurgerInner = styled.div`
@@ -151,7 +152,7 @@ export const Burger = styled.div<{ open: boolean }>`
             &:nth-child(2) {
                 opacity: 0;
             }
-        
+
             &:nth-child(3) {
                 transform: translateY(0) rotate(-45deg);
             }

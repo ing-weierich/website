@@ -1,14 +1,13 @@
 export const colors = {
-    grey: 'rgba(244, 244, 244, 1)',
+    grey: 'rgba(240, 240, 240, 1)',
     white: 'rgba(255, 255, 255, 1)',
-    darkBlue: 'rgba(4, 84, 128, 1)',
-    blue: 'rgba(134, 194, 230, 1)',
-    black: 'rgba(21, 20, 20, 1)',
+    blue: 'rgba(2, 50, 77, 1)',
+    black: 'rgba(1, 16, 25, 1)',
 };
 
 export const fonts = {
-    normal: `'Cabin', sans-serif`,
-    headlines: `'Mulish', sans-serif`,
+    normal: `'Open Sans', sans-serif`,
+    headlines: `'Spartan', sans-serif`,
 };
 
 export const maxWidth = 1180;

@@ -4,6 +4,6 @@ import { up } from 'styled-breakpoints';
 export const Container = styled.div`
     padding-top: 122px;
     ${up('xl')} {
-        padding-top: 80px;
+        padding-top: 136px;
     }
 `;
