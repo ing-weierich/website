@@ -1,10 +1,10 @@
 import { up } from 'styled-breakpoints';
 import styled from 'styled-components';
 
-export const Container = styled.div<{ greyBackground: boolean }>`
+export const Container = styled.div<{ whiteBackground: boolean }>`
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: ${({ greyBackground, theme }) => (greyBackground ? theme.colors.grey : theme.colors.white)};
+    background-color: ${({ whiteBackground, theme }) => (whiteBackground ? theme.colors.white : theme.colors.grey)};
 
     ${up('xl')} {
         padding-top: 50px;

@@ -21,7 +21,6 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: ${fonts.normal};
-    background-color: ${colors.white};
     color: ${colors.black};
   }
 
