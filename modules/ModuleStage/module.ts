@@ -21,6 +21,8 @@ const Module = createModule({
                     image {
                         url
                         title
+                        width
+                        height
                     }
                 }
             }

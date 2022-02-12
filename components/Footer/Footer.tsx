@@ -36,7 +36,7 @@ const FooterComponent = ({ footerNavigation }: any) => {
 
             <Styled.BottomContainer>
                 <Styled.CopyrightContainer>
-                    <Styled.Copyright>©KAIZEN VEREIN FÜR KAMPFKUNST E.V. {currentYear}</Styled.Copyright>
+                    <Styled.Copyright>©Ingenieurbüro Weierich {currentYear}</Styled.Copyright>
                 </Styled.CopyrightContainer>
 
                 <Styled.Navigation>
