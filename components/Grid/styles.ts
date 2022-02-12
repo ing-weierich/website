@@ -2,7 +2,7 @@ import { up } from 'styled-breakpoints';
 import styled, { css } from 'styled-components';
 import { ColType } from './types.d';
 
-export const GridWrapper = styled.div<{ cols: ColType; centered?: boolean }>`
+export const GridWrapper = styled.div<any>`
     display: grid;
     grid-template-columns: repeat(${({ cols }) => cols.default}, minmax(0, 1fr));
     grid-template-rows: auto;
