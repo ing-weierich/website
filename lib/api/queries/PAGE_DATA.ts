@@ -31,6 +31,8 @@ const PAGE_DATA = gql`
                             id
                         }
                         ... on Article {
+                            color
+                            noPadding
                             modulesCollection {
                                 items {
                                     sys {

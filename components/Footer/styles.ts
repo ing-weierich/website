@@ -8,6 +8,7 @@ export const TopContainer = styled.div`
     padding: 80px 24px;
     background-color: ${({ theme }) => theme.colors.blue};
     color: ${({ theme }) => theme.colors.white};
+    position: relative;
 
     ${up('xl')} {
         padding: 120px 0;
@@ -17,17 +18,71 @@ export const TopContainer = styled.div`
     }
 `;
 
-export const TopContainerInside = styled.div``;
+export const TopContainerInside = styled.div`
+    ${up('xl')} {
+        display: flex;
+        width: ${({ theme }) => theme.maxWidth}px;
+        margin: 0 auto;
+    }
+`;
 
-export const Box = styled.div``;
+export const Box = styled.div`
+    ${up('xl')} {
+        display: flex;
+        flex-wrap: wrap;
+    }
+`;
 
-export const Headline = styled.div``;
+export const Headline = styled.div`
+    font-family: ${({ theme }) => theme.fonts.headlines};
+    font-size: 24px;
+    line-height: 38px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
 
-export const ContactData = styled.div``;
+    ${up('xl')} {
+        line-height: 48px;
+    }
+`;
 
-export const Data = styled.div``;
+export const Text = styled.div`
+    font-size: 20px;
+    line-height: 28px;
+`;
 
-export const Text = styled.div``;
+export const Link = styled.a`
+    color: ${({ theme }) => theme.colors.white};
+    text-decoration: none;
+    display: flex;
+    margin-bottom: 20px;
+
+    ${up('xl')} {
+        margin-right: 34px;
+    }
+`;
+
+export const Icon = styled.img`
+    margin-right: 18px;
+    width: 25px;
+    height: auto;
+`;
+
+export const Data = styled.div`
+    font-size: 18px;
+`;
+
+export const Fish = styled.img`
+    display: none;
+
+    ${up('xl')} {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+`;
 
 export const BottomContainer = styled.div`
     padding: 40px 24px;

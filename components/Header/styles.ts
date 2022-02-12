@@ -92,6 +92,7 @@ export const LogoLink = styled(link)``;
 export const Logo = styled.img<{ open: boolean }>`
     width: 50px;
     height: auto;
+    cursor: pointer;
 
     ${up('xl')} {
         width: 80px;

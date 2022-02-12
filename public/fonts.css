@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src:  url('/Open_Sans/static/OpenSans/OpenSans-Regular.ttf'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/Open_Sans/static/OpenSans/OpenSans-SemiBold.ttf'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+  }
+  @font-face {
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/Spartan/static/Spartan-Medium.ttf'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+  }
+
+
+
+  @font-face {
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/Spartan/static/Spartan-Bold.ttf'); /* Chrome 26+, Opera 23+, Firefox 39+ */
+  }
