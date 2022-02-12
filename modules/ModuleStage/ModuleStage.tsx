@@ -5,7 +5,7 @@ const ModuleStage = ({ className, ...props }: any) => {
     const { headline, subheadline, image } = props.moduleStage;
 
     return (
-        <Styled.Container>
+        <Styled.Container className={className}>
             <Styled.LogoContainer>
                 <Styled.Logo src='/logo.svg' alt='Logo' />
             </Styled.LogoContainer>

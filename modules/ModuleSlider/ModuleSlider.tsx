@@ -6,7 +6,7 @@ import * as Styled from './styles';
 // Import Swiper styles
 import 'swiper/css';
 
-const Slider = ({ ...props }) => {
+const Slider = ({ className, ...props }: any) => {
     const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
     const images = props?.moduleSlider?.imagesCollection?.items;
@@ -16,7 +16,7 @@ const Slider = ({ ...props }) => {
     }
 
     return (
-        <Styled.Container>
+        <Styled.Container className={className}>
             <Styled.Prev onClick={() => swiperInstance.slidePrev()}>
                 <Styled.Icon src='/arrow_back_white.svg' />
             </Styled.Prev>
