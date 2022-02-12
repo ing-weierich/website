@@ -4,6 +4,8 @@ import { up } from 'styled-breakpoints';
 
 export const Container = styled.div`
     position: relative;
+    overflow: hidden;
+    width: 100%;
 `;
 
 export const Image = styled(NextImage)`

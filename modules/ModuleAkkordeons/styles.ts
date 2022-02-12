@@ -55,4 +55,14 @@ export const Content = styled.div<{ isOpen: boolean }>`
         margin-left: 15px;
         list-style: square;
     }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin-bottom: 20px;
+    }
 `;
