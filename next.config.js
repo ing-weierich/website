@@ -4,15 +4,11 @@ const fetchIndex = require('./fetchIndexPage');
 module.exports = {
   async redirects() {
     const redirects = [];
-    const page = await fetchIndex();
-
-    if (page) {
-      redirects.push({
+    redirects.push({
         source: '/',
-        destination: `/${page}`,
+        destination: `/startseite`,
         permanent: true,
       })
-    }
 
     return redirects;
   },

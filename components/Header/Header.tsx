@@ -28,7 +28,7 @@ const Header = ({ mainNavigation }: any) => {
                         })}
                     </Styled.MobileNavigation>
 
-                    <Styled.LogoLink href='/'>
+                    <Styled.LogoLink href='/startseite'>
                         <Styled.Logo open={open} src='/logo.svg' />
                     </Styled.LogoLink>
 
