@@ -28,7 +28,7 @@ const Slider = ({ ...props }) => {
                     return (
                         <SwiperSlide key={image.url}>
                             <Styled.ImageContainer>
-                                <Styled.Image layout='fill' src={image.url} alt={image.title} />
+                                <Styled.Image priority layout='fill' src={image.url} alt={image.title} />
                             </Styled.ImageContainer>
                         </SwiperSlide>
                     );

@@ -1,7 +1,7 @@
 import * as Styled from './styles';
 import { useState } from 'react';
 
-const Header = ({ mainNavigation }: any) => {
+const Header = ({ mainNavigation, className }: any) => {
     const [open, setOpen] = useState(false);
 
     const handleButtonClick = () => {
@@ -10,7 +10,7 @@ const Header = ({ mainNavigation }: any) => {
 
     return (
         <>
-            <Styled.Container>
+            <Styled.Container className={className}>
                 <Styled.Inner>
                     <Styled.MobileNavigation open={open}>
                         {mainNavigation?.map((item: any) => {

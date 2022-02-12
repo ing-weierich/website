@@ -1,4 +1,4 @@
-import link from 'next/link';
+import Link from 'next/link';
 import { up } from 'styled-breakpoints';
 import styled from 'styled-components';
 
@@ -32,7 +32,7 @@ export const DesktopNavigation = styled.nav`
     }
 `;
 
-export const NavLink = styled(link)``;
+export const NavLink = styled(Link)``;
 
 export const NavValue = styled.div`
     color: ${({ theme }) => theme.colors.white};
@@ -87,7 +87,7 @@ export const Inner = styled.div`
     }
 `;
 
-export const LogoLink = styled(link)``;
+export const LogoLink = styled(Link)``;
 
 export const Logo = styled.img<{ open: boolean }>`
     width: 50px;
