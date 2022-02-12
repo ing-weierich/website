@@ -44,12 +44,14 @@ export const Button = styled(ButtonComponent)`
 export const Headline = styled.div`
     font-family: ${({ theme }) => theme.fonts.headlines};
     font-weight: 700;
-    font-size: 36px;
-    line-height: 64px;
+    font-size: 24px;
+    line-height: 44px;
     text-transform: uppercase;
     margin-bottom: 20px;
 
     ${up('xl')} {
+        font-size: 36px;
+        line-height: 64px;
         margin-bottom: 40px;
     }
 `;

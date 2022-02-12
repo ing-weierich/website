@@ -15,10 +15,15 @@ export const Inner = styled.div`
 
 export const Headline = styled.div`
     font-weight: 700;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 36px;
     margin-bottom: 20px;
     font-family: ${({ theme }) => theme.fonts.headlines};
+
+    ${up('xl')} {
+        font-size: 24px;
+        line-height: 40px;
+    }
 `;
 
 export const Card = styled.div`
@@ -28,13 +33,22 @@ export const Card = styled.div`
 export const ImageContainer = styled.div``;
 
 export const Box = styled.div`
-    padding: 40px;
+    padding: 40px 20px;
     height: 100%;
+
+    ${up('xl')} {
+        padding: 40px;
+    }
 `;
 
 export const Text = styled.div`
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 26px;
+
+    ${up('xl')} {
+        font-size: 20px;
+        line-height: 24px;
+    }
 
     ul {
         list-style: square;
