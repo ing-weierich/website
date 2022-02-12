@@ -57,13 +57,12 @@ export const Subheadline = styled.div`
 export const LogoContainer = styled.div`
     display: none;
 
-
     ${up('xl')} {
         display: block;
         position: absolute;
         opacity: 0.11;
         bottom: 0;
-        left: 0
+        left: 0;
         overflow: hidden;
     }
 `;

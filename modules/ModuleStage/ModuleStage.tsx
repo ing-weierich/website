@@ -9,6 +9,7 @@ const ModuleStage = ({ className, ...props }: any) => {
             <Styled.LogoContainer>
                 <Styled.Logo src='/logo.svg' alt='Logo' />
             </Styled.LogoContainer>
+
             <Styled.Inner>
                 <Styled.Content>
                     <Styled.Headline>{headline}</Styled.Headline>
