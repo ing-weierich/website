@@ -25,7 +25,7 @@ const FooterComponent = ({ footerNavigation }: any) => {
                     </Styled.Box>
                     <Styled.Box>
                         <Styled.Text>
-                            Sie suchen nach einem kompetenten Partner in den Bereichen Gewässerökologie und Fischereibiologie?{' '}
+                            Sie suchen nach einem kompetenten Partner in den Bereichen Gewässerökologie und Gewässerplanung?{' '}
                         </Styled.Text>
                         <Styled.Text>
                             <strong>Wir helfen Ihnen gerne unverbindlich weiter. </strong>
