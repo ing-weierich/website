@@ -8,7 +8,7 @@ const ModuleImageText = ({ className, ...props }: any) => {
         <Styled.Container>
             <Styled.Inner>
                 <Styled.ImageContainer>
-                    <Styled.Image src={image.url} width={image.width} height={image.height} />
+                    <Styled.Image src={image.url} width={image.width} alt={image.title} height={image.height} />
                     <Styled.Text>{documentToReactComponents(text?.json)}</Styled.Text>
                 </Styled.ImageContainer>
             </Styled.Inner>

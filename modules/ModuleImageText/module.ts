@@ -21,6 +21,7 @@ const Module = createModule({
                         url
                         width
                         height
+                        title
                     }
                     text {
                         json
