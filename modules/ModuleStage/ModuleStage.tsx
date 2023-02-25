@@ -16,7 +16,7 @@ const ModuleStage = ({ className, ...props }: any) => {
                     {subheadline && <Styled.Subheadline>{subheadline}</Styled.Subheadline>}
                 </Styled.Content>
                 <Styled.ImageContainer>
-                    <Image src={`${image.url}?w=628&h=580&fit=fill&f=top`} width={628} height={580} />
+                    <Image src={`${image.url}?w=628&h=580&fit=fill&f=top`} alt={image.title} width={628} height={580} />
                 </Styled.ImageContainer>
             </Styled.Inner>
         </Styled.Container>

@@ -18,7 +18,7 @@ const ModuleCards = ({ className, ...props }: any) => {
                         return (
                             <Styled.Card key={item.headline}>
                                 <Styled.ImageContainer>
-                                    <Image src={`${item.image.url}?w=628&h=360&fit=fill`} width={628} height={360} />
+                                    <Image src={`${item.image.url}?w=628&h=360&fit=fill`} width={628} height={360} alt={item.image.title} />
                                     <Styled.Box>
                                         <Styled.Headline>{item.headline}</Styled.Headline>
                                         <Styled.Text>{documentToReactComponents(item.text.json)}</Styled.Text>
