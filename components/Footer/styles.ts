@@ -1,6 +1,5 @@
 import link from 'next/link';
 import styled from 'styled-components';
-import { up } from 'styled-breakpoints';
 
 export const Container = styled.footer``;
 
@@ -10,7 +9,7 @@ export const TopContainer = styled.div`
     color: ${({ theme }) => theme.colors.white};
     position: relative;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         padding: 120px 0;
         display: flex;
         flex-wrap: wrap;
@@ -19,7 +18,7 @@ export const TopContainer = styled.div`
 `;
 
 export const TopContainerInside = styled.div`
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         display: flex;
         width: ${({ theme }) => theme.maxWidth}px;
         margin: 0 auto;
@@ -27,7 +26,7 @@ export const TopContainerInside = styled.div`
 `;
 
 export const Box = styled.div`
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         display: flex;
         flex-wrap: wrap;
     }
@@ -40,7 +39,7 @@ export const Headline = styled.div`
     text-transform: uppercase;
     margin-bottom: 40px;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         line-height: 48px;
     }
 `;
@@ -56,7 +55,7 @@ export const Link = styled.a`
     display: flex;
     margin-bottom: 20px;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         margin-right: 34px;
     }
 `;
@@ -74,7 +73,7 @@ export const Data = styled.div`
 export const Fish = styled.img`
     display: none;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         display: block;
         position: absolute;
         top: 0;
@@ -89,7 +88,7 @@ export const BottomContainer = styled.div`
     display: flex;
     flex-direction: column;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         flex-direction: inherit;
         width: ${({ theme }) => theme.maxWidth}px;
         margin: 0 auto;
@@ -102,7 +101,7 @@ export const CopyrightContainer = styled.div`
     order: 2;
     width: 100%;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         order: 1;
         width: auto;
     }
@@ -121,7 +120,7 @@ export const Navigation = styled.div`
     width: 100%;
     margin-bottom: 40px;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         order: 2;
         width: auto;
         margin-bottom: 0;
@@ -138,7 +137,7 @@ export const NavigationValue = styled.div`
     text-transform: uppercase;
     margin-bottom: 10px;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         margin-left: 40px;
     }
 
@@ -150,7 +149,7 @@ export const NavigationValue = styled.div`
 export const Logo = styled.img`
     display: none;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         display: block;
         margin-bottom: 40px;
     }

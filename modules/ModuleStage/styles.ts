@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { up } from 'styled-breakpoints';
 
 export const Container = styled.div`
     position: relative;
@@ -9,7 +8,7 @@ export const Container = styled.div`
 export const Inner = styled.div`
     padding: 40px 20px;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         padding: 50px 0;
         width: ${({ theme }) => theme.maxWidth}px;
         margin: 0 auto;
@@ -20,7 +19,7 @@ export const Inner = styled.div`
 export const Content = styled.div`
     margin-bottom: 40px;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         width: 50%;
         padding-right: 54px;
     }
@@ -33,7 +32,7 @@ export const Headline = styled.div`
     line-height: 48px;
     text-transform: uppercase;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         font-size: 48px;
         line-height: 80px;
     }
@@ -47,7 +46,7 @@ export const Subheadline = styled.div`
     text-transform: uppercase;
     margin-top: 20px;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         margin-top: 40px;
         font-size: 24px;
         line-height: 40px;
@@ -57,7 +56,7 @@ export const Subheadline = styled.div`
 export const LogoContainer = styled.div`
     display: none;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         display: block;
         position: absolute;
         opacity: 0.11;
@@ -75,7 +74,7 @@ export const Logo = styled.img`
 `;
 
 export const ImageContainer = styled.div`
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         width: 50%;
         padding-left: 54px;
         transform: translateY(150px);

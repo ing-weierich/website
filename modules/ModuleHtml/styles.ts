@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { up } from 'styled-breakpoints';
 
 export const Container = styled.div`
     padding: 80px 24px;
@@ -29,7 +28,7 @@ export const Container = styled.div`
     p a {
         color: ${({ theme }) => theme.colors.black};
     }
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         padding: 120px 0;
         width: ${({ theme }) => theme.maxWidth}px;
         margin: 0 auto;

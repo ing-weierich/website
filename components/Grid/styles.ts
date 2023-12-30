@@ -1,4 +1,3 @@
-import { up } from 'styled-breakpoints';
 import styled, { css } from 'styled-components';
 import { ColType } from './types.d';
 
@@ -8,15 +7,15 @@ export const GridWrapper = styled.div<any>`
     grid-template-rows: auto;
     grid-gap: 20px;
 
-    ${up('md')} {
+    ${({ theme }) => theme.breakpoints.up('md')} {
         grid-template-columns: repeat(${({ cols }) => cols.md}, minmax(0, 1fr));
     }
 
-    ${up('lg')} {
+    ${({ theme }) => theme.breakpoints.up('lg')} {
         grid-template-columns: repeat(${({ cols }) => cols.lg}, minmax(0, 1fr));
     }
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         grid-template-columns: repeat(${({ cols }) => cols.xl}, minmax(0, 1fr));
         margin-left: 0;
         margin-right: 0;

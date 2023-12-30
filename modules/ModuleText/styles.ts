@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 import ButtonComponent from '@nextful/components/Button';
-import { up } from 'styled-breakpoints';
 
 export const Container = styled.div``;
 
 export const Inner = styled.div`
     padding: 40px 20px;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         padding: 50px 0;
         width: ${({ theme }) => theme.maxWidth}px;
         margin: 0 auto;
@@ -16,7 +15,7 @@ export const Inner = styled.div`
 `;
 
 export const Box = styled.div`
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         flex: 1;
 
         &:first-child {
@@ -49,7 +48,7 @@ export const Headline = styled.div`
     text-transform: uppercase;
     margin-bottom: 20px;
 
-    ${up('xl')} {
+    ${({ theme }) => theme.breakpoints.up('xl')} {
         font-size: 36px;
         line-height: 64px;
         margin-bottom: 40px;
