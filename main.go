@@ -109,13 +109,20 @@ func main() {
 				if !ok {
 					return "#"
 				}
+				str = strings.TrimSpace(str)
+				if str == "" {
+					return "#"
+				}
 				if strings.HasPrefix(str, "http://") || strings.HasPrefix(str, "https://") || strings.HasPrefix(str, "mailto:") || strings.HasPrefix(str, "tel:") {
+					return str
+				}
+				if strings.HasPrefix(str, "#") {
 					return str
 				}
 				if strings.HasPrefix(str, "/") {
 					return str
 				}
-				return "/" + str
+				return "/" + strings.TrimSuffix(str, "/")
 			},
 		},
 	}

@@ -1,5 +1,9 @@
 {
   "buildCommand": "npm run build:all",
   "outputDirectory": "dist",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/:path((?!.*\\.).*)", "destination": "/:path.html" }
+  ]
 }
