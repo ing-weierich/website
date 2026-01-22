@@ -77,7 +77,7 @@
                       "headline": "Gutachten",
                       "image": {
                         "__typename": "Asset",
-                        "url": "/assets/contentful/2kWMgHL0Tv8wmrDdwQZq19-7b63c2684a7960158655b13b9f8dc975",
+                        "url": "/assets/contentful/bager-bruckenbau",
                         "width": 1162,
                         "height": 1542,
                         "title": "Bager Brückenbau"
@@ -92,7 +92,7 @@
                       "headline": "KARTIERUNG, ERHEBUNG UND BEWERTUNG",
                       "image": {
                         "__typename": "Asset",
-                        "url": "/assets/contentful/1OSCPZR7PpCwAQStxhIjrc-879e1267e9c3c7a91912d2795c3c3eae",
+                        "url": "/assets/contentful/nase",
                         "width": 4032,
                         "height": 3024,
                         "title": "Nase"
@@ -107,7 +107,7 @@
                       "headline": "WASSERRAHMENRICHTLINIE",
                       "image": {
                         "__typename": "Asset",
-                        "url": "/assets/contentful/1eRB9RMsvrMTovIjyzcAnf-f051f64d0bab3bbc5e5b8cf8fc073516",
+                        "url": "/assets/contentful/leistungen-wasserrahmenrichtlinie",
                         "width": 4000,
                         "height": 3000,
                         "title": "leistungen wasserrahmenrichtlinie"
@@ -122,7 +122,7 @@
                       "headline": "GEWÄSSERPLANUNG UND GEWÄSSERENTWICKLUNG",
                       "image": {
                         "__typename": "Asset",
-                        "url": "/assets/contentful/1wA34DzVjcB5baXAmdCbyC-17d8f4c819c3627fefa84876c8d48077",
+                        "url": "/assets/contentful/leistungen-gewaesserplanung",
                         "width": 4000,
                         "height": 3000,
                         "title": "leistungen gewaesserplanung"

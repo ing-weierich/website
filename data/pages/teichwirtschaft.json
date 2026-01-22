@@ -40,17 +40,17 @@
                   "items": [
                     {
                       "__typename": "Asset",
-                      "url": "/assets/contentful/57z47iaXEpTpCzBLNQ9d5V-852557d9d1ec95773efe1e0c1f89f558",
+                      "url": "/assets/contentful/sortiertisch",
                       "title": "Sortiertisch"
                     },
                     {
                       "__typename": "Asset",
-                      "url": "/assets/contentful/1RLmpYGmMcNLkM5iCNIZoP-90a31fbd9a0533e04b53ee9f15dda87f",
+                      "url": "/assets/contentful/abfischen-im-teich",
                       "title": "Abfischen im Teich"
                     },
                     {
                       "__typename": "Asset",
-                      "url": "/assets/contentful/ktmPAOYW4NvHYTY4Ftw40-b6568a730fcce4c2dc44db2de4d719b6",
+                      "url": "/assets/contentful/zander",
                       "title": "Zander"
                     }
                   ]

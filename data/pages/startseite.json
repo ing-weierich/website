@@ -39,7 +39,7 @@
                 "subheadline": "Ingenieurbüro Weierich",
                 "image": {
                   "__typename": "Asset",
-                  "url": "/assets/contentful/1OSCPZR7PpCwAQStxhIjrc-879e1267e9c3c7a91912d2795c3c3eae",
+                  "url": "/assets/contentful/nase",
                   "width": 4032,
                   "height": 3024,
                   "title": "Nase"
@@ -118,7 +118,7 @@
                 "headline": "Unsere Teichwirtschaft",
                 "image": {
                   "__typename": "Asset",
-                  "url": "/assets/contentful/1RLmpYGmMcNLkM5iCNIZoP-90a31fbd9a0533e04b53ee9f15dda87f",
+                  "url": "/assets/contentful/abfischen-im-teich",
                   "width": 1600,
                   "height": 1200,
                   "title": "Abfischen im Teich"

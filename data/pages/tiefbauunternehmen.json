@@ -40,17 +40,17 @@
                   "items": [
                     {
                       "__typename": "Asset",
-                      "url": "/assets/contentful/5liFuyGMWylVmFOL0zQZIz-314b0b839faf1c3fa05ff26f3ad48e0b",
+                      "url": "/assets/contentful/20170317-070114",
                       "title": "20170317 070114"
                     },
                     {
                       "__typename": "Asset",
-                      "url": "/assets/contentful/5OO9OQc0gupJfG8MA2db8a-93a38c0e7e7d7597589f355111e5da93",
+                      "url": "/assets/contentful/tiefbauunternehmen-bild-1",
                       "title": "Tiefbauunternehmen Bild 1"
                     },
                     {
                       "__typename": "Asset",
-                      "url": "/assets/contentful/KrecPMEcaS8iPXPwjQgHx-484eae6a7c674bb6c19eafd1bb4a117d",
+                      "url": "/assets/contentful/tiefbauunternehmen-bild-2",
                       "title": "Tiefbauunternehmen Bild 2"
                     }
                   ]
