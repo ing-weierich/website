@@ -1,0 +1,102 @@
+{
+  "sys": {
+    "id": "3n7x8yfpOf7O3YEYqBCvGU",
+    "__typename": "Sys"
+  },
+  "__typename": "Page",
+  "openGraph": null,
+  "seo": {
+    "__typename": "Seo",
+    "metaTitle": "Meta-Titel: Unsere Leistungen | Gewässerökologie und -planung auf höchstem Niveau - Ingenieurbüro Weierich",
+    "metaDescription": "Beim Ingenieurbüro Weierich bieten wir Ihnen umfassende Leistungen im Bereich Gewässerökologie und -planung. Unsere Experten entwickeln nachhaltige Lösungen für Gewässerprobleme und bieten Beratung, Planung und Umsetzung von Gewässerprojekten an."
+  },
+  "articlesCollection": {
+    "__typename": "PageArticlesCollection",
+    "items": [
+      {
+        "sys": {
+          "id": "42IszTBcLGNkucOX8T5dq1",
+          "__typename": "Sys"
+        },
+        "__typename": "Article",
+        "color": null,
+        "noPadding": true,
+        "modulesCollection": {
+          "items": [
+            {
+              "sys": {
+                "id": "6WElg99HDjAtxZrAYwcwWr",
+                "__typename": "Sys"
+              },
+              "__typename": "ModuleSlider",
+              "moduleSlider": {
+                "sys": {
+                  "id": "6WElg99HDjAtxZrAYwcwWr",
+                  "__typename": "Sys"
+                },
+                "__typename": "ModuleSlider",
+                "imagesCollection": {
+                  "__typename": "AssetCollection",
+                  "items": [
+                    {
+                      "__typename": "Asset",
+                      "url": "/assets/contentful/57z47iaXEpTpCzBLNQ9d5V-852557d9d1ec95773efe1e0c1f89f558",
+                      "title": "Sortiertisch"
+                    },
+                    {
+                      "__typename": "Asset",
+                      "url": "/assets/contentful/1RLmpYGmMcNLkM5iCNIZoP-90a31fbd9a0533e04b53ee9f15dda87f",
+                      "title": "Abfischen im Teich"
+                    },
+                    {
+                      "__typename": "Asset",
+                      "url": "/assets/contentful/ktmPAOYW4NvHYTY4Ftw40-b6568a730fcce4c2dc44db2de4d719b6",
+                      "title": "Zander"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "__typename": "ArticleModulesCollection"
+        }
+      },
+      {
+        "sys": {
+          "id": "4vCWCaU5PxqGVIa4fU9zGq",
+          "__typename": "Sys"
+        },
+        "__typename": "Article",
+        "color": null,
+        "noPadding": null,
+        "modulesCollection": {
+          "items": [
+            {
+              "sys": {
+                "id": "4b3WYUyzj2eYN4ZAqwZJKE",
+                "__typename": "Sys"
+              },
+              "__typename": "ModuleText",
+              "moduleText": {
+                "sys": {
+                  "id": "4b3WYUyzj2eYN4ZAqwZJKE",
+                  "__typename": "Sys"
+                },
+                "__typename": "ModuleText",
+                "buttonLink": null,
+                "text": {
+                  "__typename": "ModuleTextText",
+                  "html": "<p>Die Teichanlage im Aurachgrund ist seit drei Generationen in Familienbesitz und hat eine Fläche von 1,5 ha. Die Bewirtschaftung erfolgt extensiv. In acht Teichen werden naturschutzfachlich relevante Fischarten (Schleie, Karausche, Rotfeder, Bitterling, Rutte, Zander) und Teichmuscheln naturnah aufgezogen. Die relativ kleinen Teiche (500-2.500 m² Wasserfläche) können strukturell optimal auf die Habitatansprüche der einzelnen Fischarten ausgestattet werden und sind vergleichsweise mit wenig Zeit-und Arbeitsaufwand zu bewirtschaften. Dabei wird besonders Wert auf eine ökologische Teichbewirtschaftung gelegt. </p><p>So gibt es z.B. nur organische Düngung (Mist, Gras, Heu) und nur alle zwei Jahre eine komplette Schilfmahd. Jeder Teich wird außerdem in regelmäßigen Jahresrythmen ausgefroren. Auf Zufütterung und Kalkung wird verzichtet. </p><p>\n\n\n\n\n\n</p>"
+                },
+                "headline": "TEICHWIRTSCHAFT",
+                "topline": null,
+                "buttonLabel": "Mehr erfahren"
+              }
+            }
+          ],
+          "__typename": "ArticleModulesCollection"
+        }
+      }
+    ]
+  }
+}

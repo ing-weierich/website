@@ -1,0 +1,102 @@
+{
+  "sys": {
+    "id": "7I9Z6nRDslC3PBitE1yODq",
+    "__typename": "Sys"
+  },
+  "__typename": "Page",
+  "openGraph": null,
+  "seo": {
+    "__typename": "Seo",
+    "metaTitle": "Tiefbauunternehmen | Ingenieurbüro Weierich als zuverlässiger Partner",
+    "metaDescription": "Ihr Partner für ihre Tiefbauunternehmung"
+  },
+  "articlesCollection": {
+    "__typename": "PageArticlesCollection",
+    "items": [
+      {
+        "sys": {
+          "id": "5CEoWnZnt9FpJocRtZwrxn",
+          "__typename": "Sys"
+        },
+        "__typename": "Article",
+        "color": null,
+        "noPadding": true,
+        "modulesCollection": {
+          "items": [
+            {
+              "sys": {
+                "id": "1HaMwAw6jMCQSohby9QOWi",
+                "__typename": "Sys"
+              },
+              "__typename": "ModuleSlider",
+              "moduleSlider": {
+                "sys": {
+                  "id": "1HaMwAw6jMCQSohby9QOWi",
+                  "__typename": "Sys"
+                },
+                "__typename": "ModuleSlider",
+                "imagesCollection": {
+                  "__typename": "AssetCollection",
+                  "items": [
+                    {
+                      "__typename": "Asset",
+                      "url": "/assets/contentful/5liFuyGMWylVmFOL0zQZIz-314b0b839faf1c3fa05ff26f3ad48e0b",
+                      "title": "20170317 070114"
+                    },
+                    {
+                      "__typename": "Asset",
+                      "url": "/assets/contentful/5OO9OQc0gupJfG8MA2db8a-93a38c0e7e7d7597589f355111e5da93",
+                      "title": "Tiefbauunternehmen Bild 1"
+                    },
+                    {
+                      "__typename": "Asset",
+                      "url": "/assets/contentful/KrecPMEcaS8iPXPwjQgHx-484eae6a7c674bb6c19eafd1bb4a117d",
+                      "title": "Tiefbauunternehmen Bild 2"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "__typename": "ArticleModulesCollection"
+        }
+      },
+      {
+        "sys": {
+          "id": "4npvnEHPMPKkHqcLMYkEIR",
+          "__typename": "Sys"
+        },
+        "__typename": "Article",
+        "color": null,
+        "noPadding": null,
+        "modulesCollection": {
+          "items": [
+            {
+              "sys": {
+                "id": "V78r9KsZDm10zYcRNekTZ",
+                "__typename": "Sys"
+              },
+              "__typename": "ModuleText",
+              "moduleText": {
+                "sys": {
+                  "id": "V78r9KsZDm10zYcRNekTZ",
+                  "__typename": "Sys"
+                },
+                "__typename": "ModuleText",
+                "buttonLink": null,
+                "text": {
+                  "__typename": "ModuleTextText",
+                  "html": "<p>Das familieneigene Tiefbauunternehmen Wolfgang Albert GmbH besteht seit drei Generationen und hat sich im Laufe der Firmengeschichten auf den ökologischen und ingenieurbiologischen Wasserbau spezialisiert. Der Tätigkeitsbereich bezieht sich auf die gesamte Region Franken. Das Leistungsspektrum umfasst u.a. der Bau von naturnahen Fischaufstiegsanlagen, die Anlegung von neuen Flussläufen und Flachwasserzonen oder die Restauration von Kieslaichplätzen. Dafür benötigtes Steinmaterial wird aus dem eigenen Steinbruch gewonnen. Für landschaftspflegerische Arbeiten entlang von Gewässern, verfügt die Firma über spezielle Baggeranbaugeräte (Heckenmulcher, Baumschere). Seit der Gründung des Ingenieurbüros Weierich besteht ein permanenter fachlicher Austausch mit dem Tiefbauunternehmen, was für beide Firmen eine sehr gute win-win-Situation ergibt.</p>"
+                },
+                "headline": "TIEFBAUUNTERNEHMEN",
+                "topline": null,
+                "buttonLabel": "Mehr erfahren"
+              }
+            }
+          ],
+          "__typename": "ArticleModulesCollection"
+        }
+      }
+    ]
+  }
+}

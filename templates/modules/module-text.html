@@ -1,0 +1,21 @@
+{{ define "module-text" }}
+{{ $data := .Data }}
+<div class="px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto xl:flex">
+    <div class="xl:flex-1 xl:pr-[40px]">
+        {{ with index $data "topline" }}
+            <div class="text-[20px] leading-[32px] font-bold text-[rgba(2,50,77,0.6)] mb-[16px]">{{ . }}</div>
+        {{ end }}
+        <div class="font-headline font-bold text-[24px] leading-[44px] uppercase mb-[20px] xl:text-[36px] xl:leading-[64px] xl:mb-[40px]">{{ index $data "headline" }}</div>
+        {{ $label := index $data "buttonLabel" }}
+        {{ $link := index $data "buttonLink" }}
+        {{ if and $label $link }}
+            <a class="btn-primary mb-[20px]" href="{{ toURL (index $link "slug") }}">{{ $label }}</a>
+        {{ end }}
+    </div>
+    <div class="xl:flex-1 xl:pl-[40px]">
+        {{ with index $data "text" }}
+            <div class="richtext">{{ safeHTML (index . "html") }}</div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

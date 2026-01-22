@@ -1,0 +1,116 @@
+{
+  "sys": {
+    "id": "5lUQYryradvrNbWLsJaHeK",
+    "__typename": "Sys"
+  },
+  "__typename": "Page",
+  "openGraph": null,
+  "seo": {
+    "__typename": "Seo",
+    "metaTitle": "Unser Team | Erfahrene Experten in Gewässerökologie und -planung - Ingenieurbüro Weierich",
+    "metaDescription": "Erfahren Sie mehr über das Team des Ingenieurbüros Weierich, das aus hochqualifizierten Experten in den Bereichen Gewässerökologie und -planung besteht. Wir arbeiten zusammen, um innovative Lösungen für Ihre Gewässerprobleme zu finden."
+  },
+  "articlesCollection": {
+    "__typename": "PageArticlesCollection",
+    "items": [
+      {
+        "sys": {
+          "id": "MlhcvGv1kWJS88KE3qtp3",
+          "__typename": "Sys"
+        },
+        "__typename": "Article",
+        "color": "#02324D",
+        "noPadding": false,
+        "modulesCollection": {
+          "items": [
+            {
+              "sys": {
+                "id": "61SCdO0TYDW5kmfoLnlu9W",
+                "__typename": "Sys"
+              },
+              "__typename": "ModuleStage",
+              "moduleStage": {
+                "sys": {
+                  "id": "61SCdO0TYDW5kmfoLnlu9W",
+                  "__typename": "Sys"
+                },
+                "__typename": "ModuleStage",
+                "headline": "DIPL. ING. MARTIN WEIERICH",
+                "subheadline": "Für Sie im Einsatz",
+                "image": {
+                  "__typename": "Asset",
+                  "url": "/assets/contentful/owv35fLUIBzcjFbGhNCGq-61fbc6e55db784c64eae60699c3a9344",
+                  "width": 1200,
+                  "height": 1600,
+                  "title": "Martin Weierich"
+                }
+              }
+            }
+          ],
+          "__typename": "ArticleModulesCollection"
+        }
+      },
+      {
+        "sys": {
+          "id": "7crVOrs4M0VXlIQJP41XCw",
+          "__typename": "Sys"
+        },
+        "__typename": "Article",
+        "color": null,
+        "noPadding": null,
+        "modulesCollection": {
+          "items": [
+            {
+              "sys": {
+                "id": "5ipUW7jeRiWkXDSiDoKdhm",
+                "__typename": "Sys"
+              },
+              "__typename": "ModuleAkkordeons",
+              "moduleAkkordeons": {
+                "sys": {
+                  "id": "5ipUW7jeRiWkXDSiDoKdhm",
+                  "__typename": "Sys"
+                },
+                "__typename": "ModuleAkkordeons",
+                "headline": "Team",
+                "accordeonsCollection": {
+                  "__typename": "ModuleAkkordeonsAccordeonsCollection",
+                  "items": [
+                    {
+                      "__typename": "ModuleAkkordeonsAkkordeon",
+                      "text": {
+                        "__typename": "ModuleAkkordeonsAkkordeonText",
+                        "html": "<p>2004-2009: Studium der Landschaftsplanung an der Technischen Universität München</p><p>Diplom 2009; Schwerpunkt: Biologische Funktionskontrollen von naturnahen Umgehungsgerinnen     </p><p> März – August 2010: Praktikum am Institut für Fischerei in Starnberg; Arbeitsbereich Fluss- und Seenfischerei           </p><p>Sept. – Okt. 2010: Praktikum bei der Struktur- und Genehmigungsdirektion Süd Neustadt a. d. Weinstraße, Oberste Fischereibehörde, incl. 1 Woche auf dem Fischereiforschungsschiff „MS Burgund“</p><p>März 2011: Gründung des Ingenieurbüro Weierich, Gewässerökologie und Gewässerplanung\n\n\n\n</p>"
+                      },
+                      "label": "Martin Weierich",
+                      "title": "Martin Weierich"
+                    },
+                    {
+                      "__typename": "ModuleAkkordeonsAkkordeon",
+                      "text": {
+                        "__typename": "ModuleAkkordeonsAkkordeonText",
+                        "html": "<p><b>wissenschaftl. Mitarbeite</b>r</p>"
+                      },
+                      "label": "Urban Bergmann",
+                      "title": "Urban Bergmann"
+                    },
+                    {
+                      "__typename": "ModuleAkkordeonsAkkordeon",
+                      "text": {
+                        "__typename": "ModuleAkkordeonsAkkordeonText",
+                        "html": "<p>Büro ABK</p>"
+                      },
+                      "label": "Dr. Dennis Kallert",
+                      "title": "Dr. Dennis Kallert"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "__typename": "ArticleModulesCollection"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{{ define "footer" }}
+<footer>
+    <div class="footer-top">
+        <img class="footer-fish" src="/fish.svg" alt="" />
+        <div class="footer-top-inner">
+            <div class="footer-box">
+                <div class="footer-headline">
+                    Fundiertes Fachwissen und ein H&ouml;chstma&szlig; an <strong>professioneller Bearbeitung</strong>
+                </div>
+                <a class="footer-link" href="tel:015115381245">
+                    <img class="footer-icon" src="/phone_white.svg" alt="Handy" />
+                    <span class="footer-data">0151 / 15 38 12 45</span>
+                </a>
+                <a class="footer-link" href="mailto:info@Ing-Weierich.de">
+                    <img class="footer-icon" src="/mail_white.svg" alt="E-Mail" />
+                    <span class="footer-data">info@Ing-Weierich.de</span>
+                </a>
+            </div>
+            <div class="footer-box">
+                <div class="footer-text">Sie suchen nach einem kompetenten Partner in den Bereichen Gew&auml;sser&ouml;kologie und Gew&auml;sserplanung?</div>
+                <div class="footer-text"><strong>Wir helfen Ihnen gerne unverbindlich weiter.</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-copy">&copy;Ingenieurb&uuml;ro Weierich {{ .CurrentYear }}</div>
+        <nav class="footer-nav">
+            {{ range .NavFooter }}
+                <a class="footer-nav-item" href="{{ toURL .Slug }}">{{ .Title }}</a>
+            {{ end }}
+        </nav>
+    </div>
+</footer>
+{{ end }}

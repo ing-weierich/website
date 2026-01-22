@@ -1,0 +1,21 @@
+{{ define "root" }}
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="/fonts.css" rel="stylesheet" />
+        <link href="/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        {{ template "header" . }}
+        <main class="pt-[122px] xl:pt-[136px]">
+            {{ template "content" . }}
+        </main>
+        {{ template "footer" . }}
+        <script src="/js/nav.js" defer></script>
+        <script src="/js/accordion.js" defer></script>
+        <script src="/js/slider.js" defer></script>
+    </body>
+</html>
+{{ end }}

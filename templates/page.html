@@ -1,0 +1,32 @@
+{{ define "content" }}
+    {{ range .Articles }}
+        <section class="{{ if .NoPadding }}py-0{{ else }}py-[20px] xl:py-[50px]{{ end }}" style="background-color: {{ .Color }};">
+            {{ range .Modules }}
+                {{ if eq .Type "ModuleStage" }}
+                    {{ template "module-stage" . }}
+                {{ end }}
+                {{ if eq .Type "ModuleText" }}
+                    {{ template "module-text" . }}
+                {{ end }}
+                {{ if eq .Type "ModuleImageText" }}
+                    {{ template "module-image-text" . }}
+                {{ end }}
+                {{ if eq .Type "ModuleCards" }}
+                    {{ template "module-cards" . }}
+                {{ end }}
+                {{ if eq .Type "ModuleAkkordeons" }}
+                    {{ template "module-akkordeons" . }}
+                {{ end }}
+                {{ if eq .Type "ModuleHeadlines" }}
+                    {{ template "module-headlines" . }}
+                {{ end }}
+                {{ if eq .Type "ModuleSlider" }}
+                    {{ template "module-slider" . }}
+                {{ end }}
+                {{ if eq .Type "ModuleHtml" }}
+                    {{ template "module-html" . }}
+                {{ end }}
+            {{ end }}
+        </section>
+    {{ end }}
+{{ end }}
