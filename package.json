@@ -6,49 +6,13 @@
     "node": ">=18.x"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky install",
-    "prettier:check": "node_modules/.bin/prettier --check './**/*.ts{,x}'",
-    "prettier:format": "node_modules/.bin/prettier --write './**/*.ts{,x}'",
-    "export:content": "node scripts/export-contentful-to-json.js",
     "build:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",
     "build:ssgo": "go run ./main.go",
-    "build:all": "bash scripts/build-all.sh",
-    "export:content-model": "contentful space export --skip-content --skip-roles --skip-webhooks --content-file=content-model.json --space-id",
-    "check:all": "yarn prettier:check",
-    "postbuild": "next-sitemap"
-  },
-  "dependencies": {
-    "@apollo/client": "^3.8.8",
-    "@contentful/rich-text-react-renderer": "^15.19.0",
-    "contentful-cli": "^1.9.31",
-    "cross-fetch": "^3.1.5",
-    "graphql": "^15.7.2",
-    "husky": "^7.0.4",
-    "next": "^12.3.4",
-    "next-pwa": "^5.6.0",
-    "next-seo": "^6.4.0",
-    "next-sitemap": "^1.6.203",
-    "querystring": "^0.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-breakpoints": "^12.1.9",
-    "styled-components": "^5.3.3",
-    "swiper": "^8.0.5"
+    "build:all": "bash scripts/build-all.sh"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
-    "@types/react": "17.0.24",
-    "@types/styled-components": "^5.1.15",
-    "babel-plugin-styled-components": "^2.0.2",
-    "dotenv": "^10.0.0",
-    "eslint": "7.32.0",
-    "eslint-config-next": "^12.3.4",
     "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1",
-    "typescript": "4.4.3"
+    "tailwindcss": "^3.4.1"
   }
 }
