@@ -172,6 +172,10 @@ func main() {
 		if originalPaths == nil {
 			continue
 		}
+		pattern := buildConfig.Generators[i].Config.Pattern
+		if pattern != "/" && strings.HasPrefix(pattern, "/") {
+			buildConfig.Generators[i].Config.Pattern = strings.TrimPrefix(pattern, "/")
+		}
 		buildConfig.Generators[i].Config.GetPaths = func() []string {
 			paths := originalPaths()
 			for i, p := range paths {
