@@ -1,22 +1,12 @@
 [
   {
-    "sys": {
-      "id": "55pnQZJXkY4apXWaTpFz9y",
-      "__typename": "Sys"
-    },
-    "__typename": "Page",
-    "parent": null,
     "title": "Impressum",
-    "slug": "impressum"
+    "slug": "impressum",
+    "children": []
   },
   {
-    "sys": {
-      "id": "nZISiY2ctk65ls345j8fe",
-      "__typename": "Sys"
-    },
-    "__typename": "Page",
-    "parent": null,
     "title": "Datenschutz",
-    "slug": "datenschutz"
+    "slug": "datenschutz",
+    "children": []
   }
 ]

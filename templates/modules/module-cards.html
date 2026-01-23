@@ -1,6 +1,6 @@
 {{ define "module-cards" }}
 {{ $data := .Data }}
-{{ $cards := index (index $data "cardsCollection") "items" }}
+{{ $cards := index $data "cards" }}
 <div class="px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
         {{ range $cards }}
@@ -13,7 +13,7 @@
                     <div class="font-headline font-bold text-[20px] leading-[36px] mb-[20px] xl:text-[24px] xl:leading-[40px]">{{ index . "headline" }}</div>
                     <div class="richtext text-[18px] leading-[26px] xl:text-[20px] xl:leading-[24px]">
                         {{ with index . "text" }}
-                            {{ safeHTML (index . "html") }}
+                            {{ safeHTML . }}
                         {{ end }}
                     </div>
                 </div>

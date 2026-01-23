@@ -8,7 +8,7 @@
         {{ end }}
         {{ with index $data "text" }}
             <div class="richtext mt-[20px] xl:mt-0 xl:bg-white xl:absolute xl:bottom-[-143px] xl:left-1/2 xl:-translate-x-1/2 xl:w-[calc(100%-216px)] xl:px-[80px] xl:py-[80px]">
-                {{ safeHTML (index . "html") }}
+                {{ safeHTML . }}
             </div>
         {{ end }}
     </div>

@@ -1,6 +1,6 @@
 {{ define "module-slider" }}
 {{ $data := .Data }}
-{{ $images := index (index $data "imagesCollection") "items" }}
+{{ $images := index $data "images" }}
 <div class="slider" data-slider>
     <button class="slider-btn slider-prev" type="button" data-slider-prev>
         <img class="slider-icon" src="/arrow_back_white.svg" alt="" />

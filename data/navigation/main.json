@@ -1,52 +1,27 @@
 [
   {
-    "sys": {
-      "id": "4cMCdPxGWJmTZlsCA3I3Ld",
-      "__typename": "Sys"
-    },
-    "__typename": "Page",
-    "parent": null,
     "title": "Leistungen",
-    "slug": "leistungen"
+    "slug": "leistungen",
+    "children": []
   },
   {
-    "sys": {
-      "id": "5lUQYryradvrNbWLsJaHeK",
-      "__typename": "Sys"
-    },
-    "__typename": "Page",
-    "parent": null,
     "title": "Team",
-    "slug": "team"
+    "slug": "team",
+    "children": []
   },
   {
-    "sys": {
-      "id": "4WMmJdYRKN7n0qjCywFqIi",
-      "__typename": "Sys"
-    },
-    "__typename": "Page",
-    "parent": null,
     "title": "Referenzen",
-    "slug": "referenzen"
+    "slug": "referenzen",
+    "children": []
   },
   {
-    "sys": {
-      "id": "3n7x8yfpOf7O3YEYqBCvGU",
-      "__typename": "Sys"
-    },
-    "__typename": "Page",
-    "parent": null,
     "title": "Teichwirtschaft",
-    "slug": "teichwirtschaft"
+    "slug": "teichwirtschaft",
+    "children": []
   },
   {
-    "sys": {
-      "id": "7I9Z6nRDslC3PBitE1yODq",
-      "__typename": "Sys"
-    },
-    "__typename": "Page",
-    "parent": null,
     "title": "Tiefbauunternehmen",
-    "slug": "tiefbauunternehmen"
+    "slug": "tiefbauunternehmen",
+    "children": []
   }
 ]

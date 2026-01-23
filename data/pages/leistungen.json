@@ -1,141 +1,75 @@
 {
-  "sys": {
-    "id": "4cMCdPxGWJmTZlsCA3I3Ld",
-    "__typename": "Sys"
-  },
-  "__typename": "Page",
-  "openGraph": null,
-  "seo": {
-    "__typename": "Seo",
-    "metaTitle": "Teichwirtschaft | Nachhaltige Bewirtschaftung von Teichen und Seen durch Ingenieurbüro Weierich",
-    "metaDescription": "Wir bieten Ihnen umfassende Lösungen für die nachhaltige Bewirtschaftung von Teichen und Seen. Unsere Experten in der Gewässerökologie und -planung unterstützen Sie bei der Entwicklung von Konzepten für die Teichwirtschaft und bieten nachhaltige Lösungen."
-  },
-  "articlesCollection": {
-    "__typename": "PageArticlesCollection",
-    "items": [
-      {
-        "sys": {
-          "id": "5ulP9bTMi4B6LJjydJml0",
-          "__typename": "Sys"
-        },
-        "__typename": "Article",
-        "color": null,
-        "noPadding": null,
-        "modulesCollection": {
-          "items": [
-            {
-              "sys": {
-                "id": "6cR9wpFCud4su6yOSUl2FZ",
-                "__typename": "Sys"
-              },
-              "__typename": "ModuleHeadlines",
-              "moduleHeadlines": {
-                "sys": {
-                  "id": "6cR9wpFCud4su6yOSUl2FZ",
-                  "__typename": "Sys"
-                },
-                "__typename": "ModuleHeadlines",
-                "headline": "unsere leistungen in der übersicht",
-                "subheadline": "In den Bereichen Gewässerökologie und Gewässerplanung"
-              }
-            }
-          ],
-          "__typename": "ArticleModulesCollection"
-        }
+  "slug": "leistungen",
+  "sections": [
+    {
+      "background": {
+        "color": "#f0f0f0",
+        "noPadding": false
       },
-      {
-        "sys": {
-          "id": "2Uy4FdA8Uk8JF2OQMiikKc",
-          "__typename": "Sys"
-        },
-        "__typename": "Article",
-        "color": null,
-        "noPadding": null,
-        "modulesCollection": {
-          "items": [
-            {
-              "sys": {
-                "id": "mdmpsunvmQpKKIY1vBtEh",
-                "__typename": "Sys"
+      "modules": [
+        {
+          "type": "headlines",
+          "data": {
+            "headline": "unsere leistungen in der übersicht",
+            "subheadline": "In den Bereichen Gewässerökologie und Gewässerplanung"
+          }
+        }
+      ]
+    },
+    {
+      "background": {
+        "color": "#f0f0f0",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "cards",
+          "data": {
+            "cards": [
+              {
+                "headline": "Gutachten",
+                "text": "<ul><li><p>Spezielle gewässerökologische Gutachten (UVP, FFH, SaP) </p></li><li><p>Fischereiliche Schadensgutachten</p></li><li><p>Monetäre Wertbestimmung von Fischereirechten, Fließgewässern, Seen, Teichen und Fischzuchtanlagen</p></li><li><p>Wärme- und Abwassereinleitungen von Industrie-, Klär- und Fischzuchtanlagen in Gewässer</p></li><li><p>Regenwetter- und Mischwassereinleitungen </p></li><li><p>Produktionsbewertung von Fischzuchtanlagen </p></li><li><p>Gewässerökologische Sanierungskonzepte </p></li><li><p>Fischereiliche Bewirtschaftungspläne </p></li><li><p>Restwasserstudien</p></li><li><p>Wasserrechtliche Nutzungskonzepte für Schifffahrt, Gemeingebrauch und Wassersport</p></li><li><p>Hydromorphologische und biologische Bewertung von Niederschlagsabflüssen in Trenn- und Mischwassersystemen zur Einleitung in Oberflächengewässer</p></li><li><p>Fischökologische Bewertung von technischen Gewässerbauwerken (Wasserkraftanlagen, Pumpwerke, Hochwasserschutzeinrichtungen, Flusswasserwärmepumpen, etc.)</p></li></ul><p></p>",
+                "image": {
+                  "url": "/assets/contentful/bager-bruckenbau",
+                  "title": "Bager Brückenbau",
+                  "width": 1162,
+                  "height": 1542
+                }
               },
-              "__typename": "ModuleCards",
-              "moduleCards": {
-                "sys": {
-                  "id": "mdmpsunvmQpKKIY1vBtEh",
-                  "__typename": "Sys"
-                },
-                "__typename": "ModuleCards",
-                "cardsCollection": {
-                  "__typename": "ModuleCardsCardsCollection",
-                  "items": [
-                    {
-                      "__typename": "ModuleCardsCard",
-                      "text": {
-                        "__typename": "ModuleCardsCardText",
-                        "html": "<ul><li><p>Spezielle gewässerökologische Gutachten (UVP, FFH, SaP) </p></li><li><p>Fischereiliche Schadensgutachten</p></li><li><p>Monetäre Wertbestimmung von Fischereirechten, Fließgewässern, Seen, Teichen und Fischzuchtanlagen</p></li><li><p>Wärme- und Abwassereinleitungen von Industrie-, Klär- und Fischzuchtanlagen in Gewässer</p></li><li><p>Regenwetter- und Mischwassereinleitungen </p></li><li><p>Produktionsbewertung von Fischzuchtanlagen </p></li><li><p>Gewässerökologische Sanierungskonzepte </p></li><li><p>Fischereiliche Bewirtschaftungspläne </p></li><li><p>Restwasserstudien</p></li><li><p>Wasserrechtliche Nutzungskonzepte für Schifffahrt, Gemeingebrauch und Wassersport</p></li><li><p>Hydromorphologische und biologische Bewertung von Niederschlagsabflüssen in Trenn- und Mischwassersystemen zur Einleitung in Oberflächengewässer</p></li><li><p>Fischökologische Bewertung von technischen Gewässerbauwerken (Wasserkraftanlagen, Pumpwerke, Hochwasserschutzeinrichtungen, Flusswasserwärmepumpen, etc.)</p></li></ul><p></p>"
-                      },
-                      "headline": "Gutachten",
-                      "image": {
-                        "__typename": "Asset",
-                        "url": "/assets/contentful/bager-bruckenbau",
-                        "width": 1162,
-                        "height": 1542,
-                        "title": "Bager Brückenbau"
-                      }
-                    },
-                    {
-                      "__typename": "ModuleCardsCard",
-                      "text": {
-                        "__typename": "ModuleCardsCardText",
-                        "html": "<ul><li><p>Bestandserhebung von Fischen, Großmuscheln und Flusskrebsen</p></li><li><p>Bergung von Fischen, Großmuscheln und Flusskrebsen </p></li><li><p>Hydraulische Funktionskontrollen von Fischschutzeinrichtungen </p></li><li><p>Sedimentmanagement</p></li><li><p>Gewässertemperaturregime</p></li><li><p>Tiefenprofile</p></li><li><p>Abflussmessungen</p></li><li><p>Gewässervermessung</p></li><li><p>Ökologische Baubegleitung</p></li><li><p>Sedimentmanagement</p></li><li><p>Restauration von Kieslaichplätzen</p></li></ul><p></p>"
-                      },
-                      "headline": "KARTIERUNG, ERHEBUNG UND BEWERTUNG",
-                      "image": {
-                        "__typename": "Asset",
-                        "url": "/assets/contentful/nase",
-                        "width": 4032,
-                        "height": 3024,
-                        "title": "Nase"
-                      }
-                    },
-                    {
-                      "__typename": "ModuleCardsCard",
-                      "text": {
-                        "__typename": "ModuleCardsCardText",
-                        "html": "<ul><li><p>Gewässerstrukturkartierung</p></li><li><p>Fische</p></li><li><p>Fachbeiträge nach EU-WRRL und WHG</p></li><li><p>Makrozoobenthos</p></li><li><p>Makrophyten</p></li></ul><p></p>"
-                      },
-                      "headline": "WASSERRAHMENRICHTLINIE",
-                      "image": {
-                        "__typename": "Asset",
-                        "url": "/assets/contentful/leistungen-wasserrahmenrichtlinie",
-                        "width": 4000,
-                        "height": 3000,
-                        "title": "leistungen wasserrahmenrichtlinie"
-                      }
-                    },
-                    {
-                      "__typename": "ModuleCardsCard",
-                      "text": {
-                        "__typename": "ModuleCardsCardText",
-                        "html": "<ul><li><p>Planung von Renaturierungsmaßnahmen in und an Gewässern</p></li><li><p>Planung von naturnahen Fischaufstiegsanlagen</p></li><li><p>Planung von Teichanlagen</p></li><li><p>Ausarbeitung von wasserrechtlichen Genehmigungen </p></li><li><p>Rekultivierung von Sand- und Kiesgruben</p></li><li><p>Gewässerentwicklungspläne</p></li><li><p>Ausarbeitung von Leistungsverzeichnissen</p></li><li><p>Begleitung von Vergabeverfahren</p><p>\n\n</p></li></ul><p></p>"
-                      },
-                      "headline": "GEWÄSSERPLANUNG UND GEWÄSSERENTWICKLUNG",
-                      "image": {
-                        "__typename": "Asset",
-                        "url": "/assets/contentful/leistungen-gewaesserplanung",
-                        "width": 4000,
-                        "height": 3000,
-                        "title": "leistungen gewaesserplanung"
-                      }
-                    }
-                  ]
+              {
+                "headline": "KARTIERUNG, ERHEBUNG UND BEWERTUNG",
+                "text": "<ul><li><p>Bestandserhebung von Fischen, Großmuscheln und Flusskrebsen</p></li><li><p>Bergung von Fischen, Großmuscheln und Flusskrebsen </p></li><li><p>Hydraulische Funktionskontrollen von Fischschutzeinrichtungen </p></li><li><p>Sedimentmanagement</p></li><li><p>Gewässertemperaturregime</p></li><li><p>Tiefenprofile</p></li><li><p>Abflussmessungen</p></li><li><p>Gewässervermessung</p></li><li><p>Ökologische Baubegleitung</p></li><li><p>Sedimentmanagement</p></li><li><p>Restauration von Kieslaichplätzen</p></li></ul><p></p>",
+                "image": {
+                  "url": "/assets/contentful/nase",
+                  "title": "Nase",
+                  "width": 4032,
+                  "height": 3024
+                }
+              },
+              {
+                "headline": "WASSERRAHMENRICHTLINIE",
+                "text": "<ul><li><p>Gewässerstrukturkartierung</p></li><li><p>Fische</p></li><li><p>Fachbeiträge nach EU-WRRL und WHG</p></li><li><p>Makrozoobenthos</p></li><li><p>Makrophyten</p></li></ul><p></p>",
+                "image": {
+                  "url": "/assets/contentful/leistungen-wasserrahmenrichtlinie",
+                  "title": "leistungen wasserrahmenrichtlinie",
+                  "width": 4000,
+                  "height": 3000
+                }
+              },
+              {
+                "headline": "GEWÄSSERPLANUNG UND GEWÄSSERENTWICKLUNG",
+                "text": "<ul><li><p>Planung von Renaturierungsmaßnahmen in und an Gewässern</p></li><li><p>Planung von naturnahen Fischaufstiegsanlagen</p></li><li><p>Planung von Teichanlagen</p></li><li><p>Ausarbeitung von wasserrechtlichen Genehmigungen </p></li><li><p>Rekultivierung von Sand- und Kiesgruben</p></li><li><p>Gewässerentwicklungspläne</p></li><li><p>Ausarbeitung von Leistungsverzeichnissen</p></li><li><p>Begleitung von Vergabeverfahren</p><p>\n\n</p></li></ul><p></p>",
+                "image": {
+                  "url": "/assets/contentful/leistungen-gewaesserplanung",
+                  "title": "leistungen gewaesserplanung",
+                  "width": 4000,
+                  "height": 3000
                 }
               }
-            }
-          ],
-          "__typename": "ArticleModulesCollection"
+            ]
+          }
         }
-      }
-    ]
-  }
+      ]
+    }
+  ]
 }

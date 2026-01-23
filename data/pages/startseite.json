@@ -1,134 +1,67 @@
 {
-  "sys": {
-    "id": "1sDAh921FlHObDizUdkIvV",
-    "__typename": "Sys"
-  },
-  "__typename": "Page",
-  "openGraph": null,
-  "seo": {
-    "__typename": "Seo",
-    "metaTitle": "Gewässerökologie und Gewässerplanung | Nachhaltige Lösungen - Ingenieurbüro Weierich",
-    "metaDescription": "Willkommen beim Ingenieurbüro Weierich, Ihrem Partner für ganzheitliche Lösungen im Bereich Gewässerökologie und Gewässerplanung. Wir bieten nachhaltige Lösungen für die Bewirtschaftung und den Schutz von Gewässern."
-  },
-  "articlesCollection": {
-    "__typename": "PageArticlesCollection",
-    "items": [
-      {
-        "sys": {
-          "id": "4WG9Fx8HmQ2Yn7F5poxnKU",
-          "__typename": "Sys"
-        },
-        "__typename": "Article",
+  "slug": "startseite",
+  "sections": [
+    {
+      "background": {
         "color": "#02324D",
-        "noPadding": null,
-        "modulesCollection": {
-          "items": [
-            {
-              "sys": {
-                "id": "25OvLnP2WzWNHSqDsSA3Qe",
-                "__typename": "Sys"
-              },
-              "__typename": "ModuleStage",
-              "moduleStage": {
-                "sys": {
-                  "id": "25OvLnP2WzWNHSqDsSA3Qe",
-                  "__typename": "Sys"
-                },
-                "__typename": "ModuleStage",
-                "headline": "kompetenz im und am gewässer",
-                "subheadline": "Ingenieurbüro Weierich",
-                "image": {
-                  "__typename": "Asset",
-                  "url": "/assets/contentful/nase",
-                  "width": 4032,
-                  "height": 3024,
-                  "title": "Nase"
-                }
-              }
-            }
-          ],
-          "__typename": "ArticleModulesCollection"
-        }
+        "noPadding": false
       },
-      {
-        "sys": {
-          "id": "6w6EwuitQcwIt3P38Fpdk7",
-          "__typename": "Sys"
-        },
-        "__typename": "Article",
+      "modules": [
+        {
+          "type": "stage",
+          "data": {
+            "headline": "kompetenz im und am gewässer",
+            "subheadline": "Ingenieurbüro Weierich",
+            "image": {
+              "url": "/assets/contentful/nase",
+              "title": "Nase",
+              "width": 4032,
+              "height": 3024
+            }
+          }
+        }
+      ]
+    },
+    {
+      "background": {
         "color": "#fff",
-        "noPadding": null,
-        "modulesCollection": {
-          "items": [
-            {
-              "sys": {
-                "id": "7xiOQ3k7EBdDoLJ0ZjdsWZ",
-                "__typename": "Sys"
-              },
-              "__typename": "ModuleText",
-              "moduleText": {
-                "sys": {
-                  "id": "7xiOQ3k7EBdDoLJ0ZjdsWZ",
-                  "__typename": "Sys"
-                },
-                "__typename": "ModuleText",
-                "text": {
-                  "__typename": "ModuleTextText",
-                  "html": "<p>Das Büro wurde von Herrn Dipl. Ing.\nMartin Weierich 2011 gegründet und bietet Leistungen in den Bereichen\nGewässerökologie und Gewässerplanung. Das Ingenieurbüro Weierich garantiert stets\neine fachlich fundierte und praxisnahe Bearbeitung der Aufträge, was u.a. durch\ndie regelmäßige Teilnahme an Fortbildungen und Seminaren gewährleistet wird.\nAufgrund der jahrelangen Zusammenarbeit mit den gleichen freien Mitarbeitern,\nist eine personelle und zeitliche Flexibilität bei der Ausführung von Projekten\nmöglich.\n\n\n\n\n\n</p>"
-                },
-                "headline": "Erheben. Bewerten.  Planen. ",
-                "topline": "Das Büro",
-                "buttonLabel": "Mehr erfahren",
-                "buttonLink": {
-                  "__typename": "Page",
-                  "slug": "leistungen"
-                }
-              }
-            }
-          ],
-          "__typename": "ArticleModulesCollection"
-        }
+        "noPadding": false
       },
-      {
-        "sys": {
-          "id": "11IuZgOHI8mvRg9IEXkdOE",
-          "__typename": "Sys"
-        },
-        "__typename": "Article",
-        "color": null,
-        "noPadding": null,
-        "modulesCollection": {
-          "items": [
-            {
-              "sys": {
-                "id": "35JAdQHraXFePYRH3wdAi5",
-                "__typename": "Sys"
-              },
-              "__typename": "ModuleImageText",
-              "moduleImageText": {
-                "sys": {
-                  "id": "35JAdQHraXFePYRH3wdAi5",
-                  "__typename": "Sys"
-                },
-                "__typename": "ModuleImageText",
-                "text": {
-                  "__typename": "ModuleImageTextText",
-                  "html": "<p> Ein bundesweites Netzwerk an Kooperationsbüros und Kollegen sichert\neinen permanenten fachlichen Austausch und gewährleistet die Bearbeitung von\nAufträgen in den meisten Bundesländern. Zum Ingenieurbüro gehören auch acht\neigene Teiche, in denen naturschutzfachlich relevante Fischarten aufgezogen\nwerden. Teichwirtschaftliche Praxiserfahrungen und ingenieurbiologische\nLeistungen werden somit gegenseitig effizient ergänzt und ausgetauscht.\nFachlichen Austausch gibt es auch mit dem familieneigenen Tiefbauunternehmen,\ndas sich auf den ökologischen Wasserbau (Fischaufstiegsanlagen,\nKiesrestauration etc.) spezialisiert hat.</p>"
-                },
-                "headline": "Unsere Teichwirtschaft",
-                "image": {
-                  "__typename": "Asset",
-                  "url": "/assets/contentful/abfischen-im-teich",
-                  "width": 1600,
-                  "height": 1200,
-                  "title": "Abfischen im Teich"
-                }
-              }
+      "modules": [
+        {
+          "type": "text",
+          "data": {
+            "topline": "Das Büro",
+            "headline": "Erheben. Bewerten.  Planen. ",
+            "text": "<p>Das Büro wurde von Herrn Dipl. Ing.\nMartin Weierich 2011 gegründet und bietet Leistungen in den Bereichen\nGewässerökologie und Gewässerplanung. Das Ingenieurbüro Weierich garantiert stets\neine fachlich fundierte und praxisnahe Bearbeitung der Aufträge, was u.a. durch\ndie regelmäßige Teilnahme an Fortbildungen und Seminaren gewährleistet wird.\nAufgrund der jahrelangen Zusammenarbeit mit den gleichen freien Mitarbeitern,\nist eine personelle und zeitliche Flexibilität bei der Ausführung von Projekten\nmöglich.\n\n\n\n\n\n</p>",
+            "button": {
+              "label": "Mehr erfahren",
+              "href": "leistungen"
             }
-          ],
-          "__typename": "ArticleModulesCollection"
+          }
         }
-      }
-    ]
-  }
+      ]
+    },
+    {
+      "background": {
+        "color": "#f0f0f0",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "image-text",
+          "data": {
+            "headline": "Unsere Teichwirtschaft",
+            "text": "<p> Ein bundesweites Netzwerk an Kooperationsbüros und Kollegen sichert\neinen permanenten fachlichen Austausch und gewährleistet die Bearbeitung von\nAufträgen in den meisten Bundesländern. Zum Ingenieurbüro gehören auch acht\neigene Teiche, in denen naturschutzfachlich relevante Fischarten aufgezogen\nwerden. Teichwirtschaftliche Praxiserfahrungen und ingenieurbiologische\nLeistungen werden somit gegenseitig effizient ergänzt und ausgetauscht.\nFachlichen Austausch gibt es auch mit dem familieneigenen Tiefbauunternehmen,\ndas sich auf den ökologischen Wasserbau (Fischaufstiegsanlagen,\nKiesrestauration etc.) spezialisiert hat.</p>",
+            "image": {
+              "url": "/assets/contentful/abfischen-im-teich",
+              "title": "Abfischen im Teich",
+              "width": 1600,
+              "height": 1200
+            }
+          }
+        }
+      ]
+    }
+  ]
 }

@@ -17,49 +17,29 @@ import (
 )
 
 type NavItem struct {
-	Sys struct {
-		ID string `json:"id"`
-	} `json:"sys"`
-	Title  string   `json:"title"`
-	Slug   string   `json:"slug"`
-	Parent *NavLink `json:"parent"`
-	Childs []*NavItem
-}
-
-type NavLink struct {
-	Sys struct {
-		ID string `json:"id"`
-	} `json:"sys"`
+	Title    string     `json:"title"`
+	Slug     string     `json:"slug"`
+	Children []*NavItem `json:"children"`
 }
 
 type PageVM struct {
-	Slug     string
-	Articles []ArticleVM
+	Slug     string      `json:"slug"`
+	Sections []SectionVM `json:"sections"`
 }
 
-type ArticleVM struct {
-	Color     string
-	NoPadding bool
-	Modules   []ModuleVM
+type SectionVM struct {
+	Background SectionBackground `json:"background"`
+	Modules    []ModuleVM        `json:"modules"`
+}
+
+type SectionBackground struct {
+	Color     string `json:"color"`
+	NoPadding bool   `json:"noPadding"`
 }
 
 type ModuleVM struct {
-	Type string
-	Data map[string]any
-}
-
-type rawPage struct {
-	ArticlesCollection struct {
-		Items []rawArticle `json:"items"`
-	} `json:"articlesCollection"`
-}
-
-type rawArticle struct {
-	Color             *string `json:"color"`
-	NoPadding         *bool   `json:"noPadding"`
-	ModulesCollection struct {
-		Items []json.RawMessage `json:"items"`
-	} `json:"modulesCollection"`
+	Type string         `json:"type"`
+	Data map[string]any `json:"data"`
 }
 
 func main() {
@@ -191,7 +171,7 @@ func buildPageView(slug string, pages map[string]*PageVM, navMain []*NavItem, na
 	if !ok {
 		return map[string]any{
 			"Slug":        slug,
-			"Articles":    []ArticleVM{},
+			"Sections":    []SectionVM{},
 			"NavMain":     navMain,
 			"NavFooter":   navFooter,
 			"CurrentYear": currentYear,
@@ -200,7 +180,7 @@ func buildPageView(slug string, pages map[string]*PageVM, navMain []*NavItem, na
 
 	return map[string]any{
 		"Slug":        pageData.Slug,
-		"Articles":    pageData.Articles,
+		"Sections":    pageData.Sections,
 		"NavMain":     navMain,
 		"NavFooter":   navFooter,
 		"CurrentYear": currentYear,
@@ -244,49 +224,18 @@ func loadPages(dir string) (map[string]*PageVM, error) {
 }
 
 func parsePage(raw []byte) (*PageVM, error) {
-	var page rawPage
+	var page PageVM
 	if err := json.Unmarshal(raw, &page); err != nil {
 		return nil, err
 	}
 
-	view := &PageVM{}
-
-	for _, article := range page.ArticlesCollection.Items {
-		articleView := ArticleVM{
-			Color:     "#f0f0f0",
-			NoPadding: false,
+	for i := range page.Sections {
+		if page.Sections[i].Background.Color == "" {
+			page.Sections[i].Background.Color = "#f0f0f0"
 		}
-
-		if article.Color != nil && *article.Color != "" {
-			articleView.Color = *article.Color
-		}
-		if article.NoPadding != nil {
-			articleView.NoPadding = *article.NoPadding
-		}
-
-		for _, moduleRaw := range article.ModulesCollection.Items {
-			var moduleData map[string]any
-			if err := json.Unmarshal(moduleRaw, &moduleData); err != nil {
-				continue
-			}
-
-			typename, _ := moduleData["__typename"].(string)
-			dataKey := lowerFirst(typename)
-			dataValue := map[string]any{}
-			if rawData, ok := moduleData[dataKey].(map[string]any); ok {
-				dataValue = rawData
-			}
-
-			articleView.Modules = append(articleView.Modules, ModuleVM{
-				Type: typename,
-				Data: dataValue,
-			})
-		}
-
-		view.Articles = append(view.Articles, articleView)
 	}
 
-	return view, nil
+	return &page, nil
 }
 
 func loadNavigation(filePath string) ([]*NavItem, error) {
@@ -300,30 +249,5 @@ func loadNavigation(filePath string) ([]*NavItem, error) {
 		return nil, err
 	}
 
-	itemByID := map[string]*NavItem{}
-	for _, item := range items {
-		itemByID[item.Sys.ID] = item
-	}
-
-	var roots []*NavItem
-	for _, item := range items {
-		if item.Parent == nil || item.Parent.Sys.ID == "" {
-			roots = append(roots, item)
-			continue
-		}
-		if parent, ok := itemByID[item.Parent.Sys.ID]; ok {
-			parent.Childs = append(parent.Childs, item)
-		} else {
-			roots = append(roots, item)
-		}
-	}
-
-	return roots, nil
-}
-
-func lowerFirst(value string) string {
-	if value == "" {
-		return value
-	}
-	return strings.ToLower(value[:1]) + value[1:]
+	return items, nil
 }
