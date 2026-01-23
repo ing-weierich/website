@@ -25,7 +25,13 @@ type NavItem struct {
 
 type PageVM struct {
 	Slug     string      `json:"slug"`
+	Meta     *PageMeta   `json:"meta"`
 	Sections []SectionVM `json:"sections"`
+}
+
+type PageMeta struct {
+	Title       string `json:"title"`
+	Description string `json:"description"`
 }
 
 type SectionVM struct {
@@ -208,6 +214,7 @@ func buildPageView(slug string, pages map[string]*PageVM, navMain []*NavItem, na
 	if !ok {
 		return map[string]any{
 			"Slug":        slug,
+			"Meta":        (*PageMeta)(nil),
 			"Sections":    []SectionVM{},
 			"NavMain":     navMain,
 			"NavFooter":   navFooter,
@@ -217,6 +224,7 @@ func buildPageView(slug string, pages map[string]*PageVM, navMain []*NavItem, na
 
 	return map[string]any{
 		"Slug":        pageData.Slug,
+		"Meta":        pageData.Meta,
 		"Sections":    pageData.Sections,
 		"NavMain":     navMain,
 		"NavFooter":   navFooter,
