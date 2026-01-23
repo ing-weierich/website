@@ -167,27 +167,21 @@ func main() {
 		return
 	}
 
-	originalPaths := buildConfig.Generators[0].Config.GetPaths
-	if originalPaths != nil {
-		buildConfig.Generators[0].Config.GetPaths = func() []string {
+	for i := range buildConfig.Generators {
+		originalPaths := buildConfig.Generators[i].Config.GetPaths
+		if originalPaths == nil {
+			continue
+		}
+		buildConfig.Generators[i].Config.GetPaths = func() []string {
 			paths := originalPaths()
 			for i, p := range paths {
+				if p == "/" {
+					paths[i] = "index"
+					continue
+				}
 				paths[i] = strings.TrimPrefix(p, "/")
 			}
 			return paths
-		}
-	}
-
-	if len(buildConfig.Generators) > 1 {
-		originalPaths := buildConfig.Generators[1].Config.GetPaths
-		if originalPaths != nil {
-			buildConfig.Generators[1].Config.GetPaths = func() []string {
-				paths := originalPaths()
-				for i, p := range paths {
-					paths[i] = strings.TrimPrefix(p, "/")
-				}
-				return paths
-			}
 		}
 	}
 
