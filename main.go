@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/janmarkuslanger/ssgo/builder"
+	"github.com/janmarkuslanger/ssgo/dev"
 	"github.com/janmarkuslanger/ssgo/page"
 	"github.com/janmarkuslanger/ssgo/rendering"
 	"github.com/janmarkuslanger/ssgo/writer"
@@ -109,7 +110,7 @@ func main() {
 
 	slugGenerator := page.Generator{
 		Config: page.Config{
-			Pattern:  "",
+			Pattern:  "/:slug",
 			Template: "templates/page.html",
 			GetPaths: func() []string {
 				return slugPaths(pages)
@@ -128,7 +129,7 @@ func main() {
 			Template: "templates/page.html",
 			GetPaths: func() []string {
 				if _, ok := pages["startseite"]; ok {
-					return []string{"index"}
+					return []string{"/"}
 				}
 				return []string{}
 			},
@@ -148,6 +149,42 @@ func main() {
 		},
 	}
 
+	if os.Getenv("SSGO_DEV") == "1" {
+		if err := os.MkdirAll(buildConfig.OutputDir, 0o755); err != nil {
+			log.Fatal(err)
+		}
+		if err := copyDir("public", buildConfig.OutputDir); err != nil {
+			log.Fatal(err)
+		}
+		log.Printf("SSGO dev server running on http://localhost:8080")
+		dev.StartServer(buildConfig)
+		return
+	}
+
+	originalPaths := buildConfig.Generators[0].Config.GetPaths
+	if originalPaths != nil {
+		buildConfig.Generators[0].Config.GetPaths = func() []string {
+			paths := originalPaths()
+			for i, p := range paths {
+				paths[i] = strings.TrimPrefix(p, "/")
+			}
+			return paths
+		}
+	}
+
+	if len(buildConfig.Generators) > 1 {
+		originalPaths := buildConfig.Generators[1].Config.GetPaths
+		if originalPaths != nil {
+			buildConfig.Generators[1].Config.GetPaths = func() []string {
+				paths := originalPaths()
+				for i, p := range paths {
+					paths[i] = strings.TrimPrefix(p, "/")
+				}
+				return paths
+			}
+		}
+	}
+
 	if err := buildConfig.Build(); err != nil {
 		log.Fatal(err)
 	}
@@ -159,7 +196,7 @@ func slugPaths(pages map[string]*PageVM) []string {
 		if slug == "" {
 			continue
 		}
-		paths = append(paths, slug)
+		paths = append(paths, "/"+slug)
 	}
 	sort.Strings(paths)
 	return paths
@@ -250,4 +287,45 @@ func loadNavigation(filePath string) ([]*NavItem, error) {
 	}
 
 	return items, nil
+}
+
+func copyDir(src string, dst string) error {
+	return filepath.WalkDir(src, func(sourcePath string, entry os.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+		rel, err := filepath.Rel(src, sourcePath)
+		if err != nil {
+			return err
+		}
+		targetPath := filepath.Join(dst, rel)
+		if entry.IsDir() {
+			return os.MkdirAll(targetPath, 0o755)
+		}
+		sourceInfo, err := entry.Info()
+		if err != nil {
+			return err
+		}
+		if err := os.MkdirAll(filepath.Dir(targetPath), 0o755); err != nil {
+			return err
+		}
+		in, err := os.Open(sourcePath)
+		if err != nil {
+			return err
+		}
+		defer in.Close()
+		out, err := os.Create(targetPath)
+		if err != nil {
+			return err
+		}
+		if _, err := out.ReadFrom(in); err != nil {
+			out.Close()
+			return err
+		}
+		if err := out.Chmod(sourceInfo.Mode()); err != nil {
+			out.Close()
+			return err
+		}
+		return out.Close()
+	})
 }
