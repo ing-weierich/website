@@ -7,7 +7,7 @@
             <div class="bg-white">
                 {{ $image := index . "image" }}
                 {{ if $image }}
-                    <img class="w-full h-auto" src="{{ index $image "url" }}" alt="{{ index $image "title" }}" />
+                    <img class="w-full h-[300px] object-cover object-center" src="{{ index $image "url" }}" alt="{{ index $image "title" }}" />
                 {{ end }}
                 <div class="px-[20px] py-[40px] xl:px-[40px] xl:py-[40px]">
                     <div class="font-headline font-bold text-[20px] leading-[36px] mb-[20px] xl:text-[24px] xl:leading-[40px]">{{ index . "headline" }}</div>
