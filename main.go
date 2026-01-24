@@ -116,7 +116,7 @@ func main() {
 
 	slugGenerator := page.Generator{
 		Config: page.Config{
-			Pattern:  "/:slug",
+			Pattern:  ":slug",
 			Template: "templates/page.html",
 			GetPaths: func() []string {
 				return slugPaths(pages)
@@ -129,33 +129,35 @@ func main() {
 		},
 	}
 
-	rootGenerator := page.Generator{
-		Config: page.Config{
-			Pattern:  "/",
-			Template: "templates/page.html",
-			GetPaths: func() []string {
-				if _, ok := pages["startseite"]; ok {
-					return []string{"/"}
-				}
-				return []string{}
+	isDev := os.Getenv("SSGO_DEV") == "1"
+	generators := []page.Generator{slugGenerator}
+	if isDev {
+		rootGenerator := page.Generator{
+			Config: page.Config{
+				Pattern:  "/",
+				Template: "templates/page.html",
+				GetPaths: func() []string {
+					if _, ok := pages["startseite"]; ok {
+						return []string{"/"}
+					}
+					return []string{}
+				},
+				GetData: func(payload page.PagePayload) map[string]any {
+					return buildPageView("startseite", pages, navMain, navFooter)
+				},
+				Renderer: renderer,
 			},
-			GetData: func(payload page.PagePayload) map[string]any {
-				return buildPageView("startseite", pages, navMain, navFooter)
-			},
-			Renderer: renderer,
-		},
+		}
+		generators = append(generators, rootGenerator)
 	}
 
 	buildConfig := builder.Builder{
-		OutputDir: "dist",
-		Writer:    &writer.FileWriter{},
-		Generators: []page.Generator{
-			rootGenerator,
-			slugGenerator,
-		},
+		OutputDir:  "dist",
+		Writer:     &writer.FileWriter{},
+		Generators: generators,
 	}
 
-	if os.Getenv("SSGO_DEV") == "1" {
+	if isDev {
 		if err := os.MkdirAll(buildConfig.OutputDir, 0o755); err != nil {
 			log.Fatal(err)
 		}
@@ -165,28 +167,6 @@ func main() {
 		log.Printf("SSGO dev server running on http://localhost:8080")
 		dev.StartServer(buildConfig)
 		return
-	}
-
-	for i := range buildConfig.Generators {
-		originalPaths := buildConfig.Generators[i].Config.GetPaths
-		if originalPaths == nil {
-			continue
-		}
-		pattern := buildConfig.Generators[i].Config.Pattern
-		if pattern != "/" && strings.HasPrefix(pattern, "/") {
-			buildConfig.Generators[i].Config.Pattern = strings.TrimPrefix(pattern, "/")
-		}
-		buildConfig.Generators[i].Config.GetPaths = func() []string {
-			paths := originalPaths()
-			for i, p := range paths {
-				if p == "/" {
-					paths[i] = "index"
-					continue
-				}
-				paths[i] = strings.TrimPrefix(p, "/")
-			}
-			return paths
-		}
 	}
 
 	if err := buildConfig.Build(); err != nil {
@@ -200,7 +180,7 @@ func slugPaths(pages map[string]*PageVM) []string {
 		if slug == "" {
 			continue
 		}
-		paths = append(paths, "/"+slug)
+		paths = append(paths, slug)
 	}
 	sort.Strings(paths)
 	return paths
