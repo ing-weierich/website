@@ -11,13 +11,7 @@
           "type": "stage",
           "data": {
             "headline": "kompetenz im und am gewässer",
-            "subheadline": "Ingenieurbüro Weierich",
-            "image": {
-              "url": "/assets/contentful/nase",
-              "title": "Nase",
-              "width": 4032,
-              "height": 3024
-            }
+            "subheadline": "Ingenieurbüro Weierich"
           }
         }
       ]
