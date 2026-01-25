@@ -1,0 +1,59 @@
+{
+  "slug": "teichwirtschaft",
+  "sections": [
+    {
+      "background": {
+        "color": "#f0f0f0",
+        "noPadding": true
+      },
+      "modules": [
+        {
+          "type": "slider",
+          "data": {
+            "images": [
+              {
+                "url": "/assets/contentful/sortiertisch",
+                "title": "Sortiertisch",
+                "width": null,
+                "height": null
+              },
+              {
+                "url": "/assets/contentful/abfischen-im-teich",
+                "title": "Abfischen im Teich",
+                "width": null,
+                "height": null
+              },
+              {
+                "url": "/assets/contentful/zander",
+                "title": "Zander",
+                "width": null,
+                "height": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "background": {
+        "color": "#f0f0f0",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "text",
+          "data": {
+            "topline": null,
+            "headline": "TEICHWIRTSCHAFT",
+            "text": "<p>Die Teichanlage im Aurachgrund ist seit drei Generationen in Familienbesitz und hat eine Fläche von 1,5 ha. Die Bewirtschaftung erfolgt extensiv. In acht Teichen werden naturschutzfachlich relevante Fischarten (Schleie, Karausche, Rotfeder, Bitterling, Rutte, Zander) und Teichmuscheln naturnah aufgezogen. Die relativ kleinen Teiche (500-2.500 m² Wasserfläche) können strukturell optimal auf die Habitatansprüche der einzelnen Fischarten ausgestattet werden und sind vergleichsweise mit wenig Zeit-und Arbeitsaufwand zu bewirtschaften. Dabei wird besonders Wert auf eine ökologische Teichbewirtschaftung gelegt. </p><p>So gibt es z.B. nur organische Düngung (Mist, Gras, Heu) und nur alle zwei Jahre eine komplette Schilfmahd. Jeder Teich wird außerdem in regelmäßigen Jahresrythmen ausgefroren. Auf Zufütterung und Kalkung wird verzichtet. </p><p>\n\n\n\n\n\n</p>",
+            "button": null
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Teischwirtschaft | Gewässerökologie und -planung auf höchstem Niveau - Ingenieurbüro Weierich",
+    "description": "Wir bieten Ihnen umfassende Lösungen für die nachhaltige Bewirtschaftung von Teichen und Seen. Unsere Experten in der Gewässerökologie und -planung unterstützen Sie bei der Entwicklung von Konzepten für die Teichwirtschaft und bieten nachhaltige Lösungen."
+  }
+}

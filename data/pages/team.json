@@ -1,0 +1,61 @@
+{
+  "slug": "team",
+  "sections": [
+    {
+      "background": {
+        "color": "#02324D",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "stage",
+          "data": {
+            "headline": "DIPL. ING. MARTIN WEIERICH",
+            "subheadline": "Für Sie im Einsatz",
+            "image": {
+              "url": "/assets/contentful/martin-weierich",
+              "title": "Martin Weierich",
+              "width": 1200,
+              "height": 1600
+            }
+          }
+        }
+      ]
+    },
+    {
+      "background": {
+        "color": "#f0f0f0",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "accordions",
+          "data": {
+            "headline": "Team",
+            "items": [
+              {
+                "label": "Martin Weierich",
+                "title": "Martin Weierich",
+                "text": "<p>2004-2009: Studium der Landschaftsplanung an der Technischen Universität München</p><p>Diplom 2009; Schwerpunkt: Biologische Funktionskontrollen von naturnahen Umgehungsgerinnen     </p><p> März – August 2010: Praktikum am Institut für Fischerei in Starnberg; Arbeitsbereich Fluss- und Seenfischerei           </p><p>Sept. – Okt. 2010: Praktikum bei der Struktur- und Genehmigungsdirektion Süd Neustadt a. d. Weinstraße, Oberste Fischereibehörde, incl. 1 Woche auf dem Fischereiforschungsschiff „MS Burgund“</p><p>März 2011: Gründung des Ingenieurbüro Weierich, Gewässerökologie und Gewässerplanung\n\n\n\n</p>"
+              },
+              {
+                "label": "Urban Bergmann",
+                "title": "Urban Bergmann",
+                "text": "<p><b>wissenschaftl. Mitarbeite</b>r</p>"
+              },
+              {
+                "label": "Dr. Dennis Kallert",
+                "title": "Dr. Dennis Kallert",
+                "text": "<p>Büro ABK</p>"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Unser Team | Erfahrene Experten in Gewässerökologie und -planung - Ingenieurbüro Weierich",
+    "description": "Erfahren Sie mehr über das Team des Ingenieurbüros Weierich, das aus hochqualifizierten Experten in den Bereichen Gewässerökologie und -planung besteht. Wir arbeiten zusammen, um innovative Lösungen für Ihre Gewässerprobleme zu finden."
+  }
+}

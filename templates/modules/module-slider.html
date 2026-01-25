@@ -1,0 +1,19 @@
+{{ define "module-slider" }}
+{{ $data := .Data }}
+{{ $images := index $data "images" }}
+<div class="slider" data-slider>
+    <button class="slider-btn slider-prev" type="button" data-slider-prev>
+        <img class="slider-icon" src="/arrow_back_white.svg" alt="" />
+    </button>
+    <button class="slider-btn slider-next" type="button" data-slider-next>
+        <img class="slider-icon" src="/arrow_forward_white.svg" alt="" />
+    </button>
+    <div class="slider-track" data-slider-track>
+        {{ range $images }}
+            <div class="slider-slide" data-slide>
+                <img class="slider-image" src="{{ index . "url" }}" alt="{{ index . "title" }}" />
+            </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

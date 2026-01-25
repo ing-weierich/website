@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Leistungen",
+    "slug": "leistungen",
+    "children": []
+  },
+  {
+    "title": "Team",
+    "slug": "team",
+    "children": []
+  },
+  {
+    "title": "Referenzen",
+    "slug": "referenzen",
+    "children": []
+  },
+  {
+    "title": "Teichwirtschaft",
+    "slug": "teichwirtschaft",
+    "children": []
+  },
+  {
+    "title": "Tiefbauunternehmen",
+    "slug": "tiefbauunternehmen",
+    "children": []
+  }
+]

@@ -1,0 +1,16 @@
+{{ define "module-image-text" }}
+{{ $data := .Data }}
+<div class="px-[20px] py-[40px] xl:px-0 xl:pt-[50px] xl:pb-[193px] xl:max-w-[1180px] xl:mx-auto">
+    <div class="relative">
+        {{ $image := index $data "image" }}
+        {{ if $image }}
+            <img class="w-full h-auto" src="{{ index $image "url" }}" alt="{{ index $image "title" }}" />
+        {{ end }}
+        {{ with index $data "text" }}
+            <div class="richtext mt-[20px] xl:mt-0 xl:bg-white xl:absolute xl:bottom-[-143px] xl:left-1/2 xl:-translate-x-1/2 xl:w-[calc(100%-216px)] xl:px-[80px] xl:py-[80px]">
+                {{ safeHTML . }}
+            </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,29 @@
+{{ define "header" }}
+<header class="header" data-header data-open="false">
+    <nav class="mobile-nav" data-nav>
+        {{ range .NavMain }}
+            <a class="nav-item" href="{{ toURL .Slug }}">{{ .Title }}</a>
+        {{ end }}
+    </nav>
+
+    <div class="header-inner">
+        <a class="logo-link" href="/startseite">
+            <img class="logo" src="/logo.svg" alt="Logo" />
+        </a>
+
+        <nav class="desktop-nav">
+            {{ range .NavMain }}
+                <a class="nav-item nav-item-desktop" href="{{ toURL .Slug }}">{{ .Title }}</a>
+            {{ end }}
+        </nav>
+
+        <button class="burger" type="button" aria-label="Navigation" data-nav-toggle>
+            <span class="burger-inner">
+                <span class="burger-line burger-line-1"></span>
+                <span class="burger-line burger-line-2"></span>
+                <span class="burger-line burger-line-3"></span>
+            </span>
+        </button>
+    </div>
+</header>
+{{ end }}
