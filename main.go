@@ -69,6 +69,7 @@ func main() {
 		"templates/layout.html",
 		"templates/partials/header.html",
 		"templates/partials/footer.html",
+		"templates/partials/cookie-consent.html",
 		"templates/modules/module-stage.html",
 		"templates/modules/module-text.html",
 		"templates/modules/module-image-text.html",

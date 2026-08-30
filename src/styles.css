@@ -341,3 +341,88 @@
         }
     }
 }
+
+@layer components {
+    .cookie-consent {
+        @apply fixed inset-x-0 bottom-0 z-50 bg-white text-black shadow-[0_-4px_24px_rgba(1,16,25,0.18)];
+        border-top: 3px solid #02324d;
+    }
+
+    .cookie-consent[hidden] {
+        display: none;
+    }
+
+    .cookie-consent-inner {
+        @apply px-[24px] py-[24px] xl:max-w-[1180px] xl:mx-auto flex flex-col gap-[16px];
+    }
+
+    .cookie-consent-title {
+        @apply font-headline font-bold text-[20px] mb-[8px];
+    }
+
+    .cookie-consent-desc {
+        @apply text-[16px] leading-[24px];
+        color: rgba(1, 16, 25, 0.87);
+    }
+
+    .cookie-consent-options {
+        @apply flex flex-col gap-[16px] border-t border-b py-[16px];
+        border-color: rgba(1, 16, 25, 0.12);
+    }
+
+    .cookie-consent-options[hidden] {
+        display: none;
+    }
+
+    .cookie-option-label {
+        @apply flex items-center gap-[10px] font-bold cursor-pointer;
+    }
+
+    .cookie-option-input {
+        @apply w-[18px] h-[18px] cursor-pointer accent-blue;
+    }
+
+    .cookie-option-input:disabled {
+        @apply cursor-not-allowed opacity-70;
+    }
+
+    .cookie-option-desc {
+        @apply text-[14px] leading-[20px] mt-[4px] ml-[28px];
+        color: rgba(1, 16, 25, 0.7);
+    }
+
+    .cookie-consent-actions {
+        @apply flex flex-col gap-[10px] sm:flex-row sm:flex-wrap sm:justify-end;
+    }
+
+    .cookie-btn {
+        @apply inline-flex items-center justify-center px-[20px] py-[12px] text-[15px] font-bold uppercase cursor-pointer transition-colors duration-200;
+        border: 2px solid #02324d;
+    }
+
+    .cookie-btn[hidden] {
+        display: none;
+    }
+
+    .cookie-btn-primary {
+        @apply bg-blue text-white;
+    }
+
+    .cookie-btn-primary:hover {
+        @apply bg-black;
+    }
+
+    .cookie-btn-secondary {
+        @apply bg-white text-blue;
+    }
+
+    .cookie-btn-secondary:hover {
+        @apply bg-grey;
+    }
+
+    .cookie-btn:focus-visible,
+    .cookie-option-input:focus-visible {
+        outline: 3px solid #02324d;
+        outline-offset: 2px;
+    }
+}
