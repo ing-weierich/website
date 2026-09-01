@@ -1,0 +1,133 @@
+{
+  "slug": "gewaesserschutz",
+  "sections": [
+    {
+      "background": {
+        "color": "#02324D",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "stage",
+          "data": {
+            "headline": "gewässerschutz",
+            "subheadline": "Ingenieurbüro Weierich",
+            "description": "Von der IHK Würzburg-Schweinfurt öffentlich bestellter und vereidigter Sachverständiger für Gewässerschutz."
+          }
+        }
+      ]
+    },
+    {
+      "background": {
+        "color": "#ffffff",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "text",
+          "data": {
+            "topline": "Ihr Partner für den Schutz von Gewässern",
+            "headline": "Gewässer schützen. Rechtssicher planen.",
+            "text": "<p>Seit 2011 unterstützt das Ingenieurbüro Weierich Kommunen, Behörden, Unternehmen und Fischereiberechtigte beim Schutz und der Entwicklung ihrer Gewässer – fachlich fundiert, praxisnah und rechtssicher. Als öffentlich bestellter und vereidigter Sachverständiger für Gewässerschutz erstellen wir gerichtsfeste Gutachten und begleiten Ihr Vorhaben von der Erhebung über die Bewertung bis zur Planung.</p><p>Ob gewässerökologisches Gutachten, Fachbeitrag nach EU-Wasserrahmenrichtlinie oder Renaturierung – sprechen Sie uns an. Eine erste Einschätzung ist unverbindlich.</p>",
+            "button": {
+              "label": "Jetzt Anfrage stellen",
+              "href": "mailto:info@Ing-Weierich.de?subject=Anfrage%20Gew%C3%A4sserschutz"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "background": {
+        "color": "#f0f0f0",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "headlines",
+          "data": {
+            "headline": "leistungen im gewässerschutz",
+            "subheadline": "Erheben. Bewerten. Planen."
+          }
+        },
+        {
+          "type": "cards",
+          "data": {
+            "cards": [
+              {
+                "headline": "Gewässerökologische Gutachten",
+                "text": "<ul><li><p>Gutachten für UVP, FFH und spezielle artenschutzrechtliche Prüfung (SaP)</p></li><li><p>Fischereiliche Schadensgutachten</p></li><li><p>Bewertung von Wärme-, Abwasser- und Mischwassereinleitungen</p></li><li><p>Gewässerökologische Sanierungskonzepte</p></li></ul>"
+              },
+              {
+                "headline": "EU-Wasserrahmenrichtlinie",
+                "text": "<ul><li><p>Fachbeiträge nach EU-WRRL und WHG</p></li><li><p>Gewässerstrukturkartierung</p></li><li><p>Bewertung von Fischen, Makrozoobenthos und Makrophyten</p></li></ul>"
+              },
+              {
+                "headline": "Kartierung, Erhebung & Bewertung",
+                "text": "<ul><li><p>Bestandserhebung und Bergung von Fischen, Großmuscheln und Flusskrebsen</p></li><li><p>Funktionskontrollen von Fischschutzeinrichtungen</p></li><li><p>Gewässervermessung, Abflussmessungen und Tiefenprofile</p></li></ul>"
+              },
+              {
+                "headline": "Gewässerplanung & Renaturierung",
+                "text": "<ul><li><p>Planung von Renaturierungsmaßnahmen und naturnahen Fischaufstiegsanlagen</p></li><li><p>Gewässerentwicklungspläne und wasserrechtliche Genehmigungen</p></li><li><p>Ökologische Baubegleitung</p></li></ul>"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "background": {
+        "color": "#ffffff",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "accordions",
+          "data": {
+            "headline": "Häufige Fragen zum Gewässerschutz",
+            "items": [
+              {
+                "label": "Was macht ein Sachverständiger für Gewässerschutz?",
+                "text": "<p>Ein öffentlich bestellter und vereidigter Sachverständiger für Gewässerschutz bewertet den ökologischen Zustand von Fließgewässern, Seen und Teichen, erstellt gerichtsfeste Gutachten und begleitet Planungen und Genehmigungsverfahren rund um den Schutz und die Entwicklung von Gewässern.</p>"
+              },
+              {
+                "label": "Wann brauche ich ein gewässerökologisches Gutachten?",
+                "text": "<p>Ein Gutachten ist unter anderem bei UVP-, FFH- und speziellen artenschutzrechtlichen Prüfungen (SaP), bei fischereilichen Schadensfällen, bei Einleitungen in Oberflächengewässer sowie bei Eingriffen an technischen Bauwerken wie Wasserkraftanlagen oder Pumpwerken erforderlich.</p>"
+              },
+              {
+                "label": "Was verlangt die EU-Wasserrahmenrichtlinie (WRRL)?",
+                "text": "<p>Die EU-Wasserrahmenrichtlinie fordert für Oberflächengewässer einen guten ökologischen Zustand. Wir erstellen die dafür nötigen Fachbeiträge nach WRRL und WHG, darunter Gewässerstrukturkartierung sowie Bewertungen von Fischen, Makrozoobenthos und Makrophyten.</p>"
+              },
+              {
+                "label": "Übernehmen Sie auch die Planung von Renaturierungen?",
+                "text": "<p>Ja. Wir planen Renaturierungsmaßnahmen, naturnahe Fischaufstiegsanlagen und Teichanlagen, erarbeiten wasserrechtliche Genehmigungen sowie Gewässerentwicklungspläne und begleiten die Umsetzung bis zur ökologischen Baubegleitung.</p>"
+              },
+              {
+                "label": "In welchen Regionen sind Sie tätig?",
+                "text": "<p>Das Ingenieurbüro Weierich hat seinen Sitz in Tretzendorf (Unterfranken, Bayern) und arbeitet über ein bundesweites Netzwerk an Kooperationsbüros deutschlandweit.</p>"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "background": {
+        "color": "#02324D",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "html",
+          "data": {
+            "html": "<div class=\"text-white text-center px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto\">\n<div class=\"font-headline font-bold text-[24px] leading-[36px] uppercase mb-[20px] xl:text-[36px]\">In wenigen Sekunden zur Anfrage</div>\n<p class=\"text-[18px] leading-[28px] mb-[40px] xl:text-[20px]\">Beschreiben Sie uns kurz Ihr Gewässer oder Ihr Vorhaben – wir melden uns unverbindlich mit den nächsten Schritten.</p>\n<div class=\"mb-[20px]\"><a class=\"btn-primary\" href=\"mailto:info@Ing-Weierich.de?subject=Anfrage%20Gew%C3%A4sserschutz\" data-analytics-event=\"gewaesserschutz_anfrage_email\">Jetzt per E-Mail anfragen</a></div>\n<div><a class=\"btn-primary\" href=\"tel:015115381245\" data-analytics-event=\"gewaesserschutz_anfrage_telefon\">Direkt anrufen: 0151 / 15 38 12 45</a></div>\n</div>\n<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"ProfessionalService\",\"name\":\"Ingenieurbüro Weierich – Sachverständiger für Gewässerschutz\",\"description\":\"Öffentlich bestellter und vereidigter Sachverständiger für Gewässerschutz. Gewässerökologische Gutachten, Wasserrahmenrichtlinie, Renaturierung und Gewässerplanung.\",\"url\":\"https://www.ing-weierich.de/gewaesserschutz\",\"telephone\":\"+49-151-15381245\",\"email\":\"info@Ing-Weierich.de\",\"founder\":\"Dipl. Ing. Martin Weierich\",\"areaServed\":\"DE\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Rathausstraße 21\",\"postalCode\":\"97514\",\"addressLocality\":\"Tretzendorf\",\"addressCountry\":\"DE\"},\"knowsAbout\":[\"Gewässerschutz\",\"Gewässerökologie\",\"Gewässerplanung\",\"EU-Wasserrahmenrichtlinie\",\"Renaturierung\",\"Fischaufstiegsanlagen\"]}</script>\n<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Was macht ein Sachverständiger für Gewässerschutz?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ein öffentlich bestellter und vereidigter Sachverständiger für Gewässerschutz bewertet den ökologischen Zustand von Fließgewässern, Seen und Teichen, erstellt gerichtsfeste Gutachten und begleitet Planungen und Genehmigungsverfahren rund um den Schutz und die Entwicklung von Gewässern.\"}},{\"@type\":\"Question\",\"name\":\"Wann brauche ich ein gewässerökologisches Gutachten?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ein Gutachten ist unter anderem bei UVP-, FFH- und speziellen artenschutzrechtlichen Prüfungen (SaP), bei fischereilichen Schadensfällen, bei Einleitungen in Oberflächengewässer sowie bei Eingriffen an technischen Bauwerken wie Wasserkraftanlagen oder Pumpwerken erforderlich.\"}},{\"@type\":\"Question\",\"name\":\"Was verlangt die EU-Wasserrahmenrichtlinie (WRRL)?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Die EU-Wasserrahmenrichtlinie fordert für Oberflächengewässer einen guten ökologischen Zustand. Wir erstellen die dafür nötigen Fachbeiträge nach WRRL und WHG, darunter Gewässerstrukturkartierung sowie Bewertungen von Fischen, Makrozoobenthos und Makrophyten.\"}},{\"@type\":\"Question\",\"name\":\"Übernehmen Sie auch die Planung von Renaturierungen?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ja. Wir planen Renaturierungsmaßnahmen, naturnahe Fischaufstiegsanlagen und Teichanlagen, erarbeiten wasserrechtliche Genehmigungen sowie Gewässerentwicklungspläne und begleiten die Umsetzung bis zur ökologischen Baubegleitung.\"}},{\"@type\":\"Question\",\"name\":\"In welchen Regionen sind Sie tätig?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Das Ingenieurbüro Weierich hat seinen Sitz in Tretzendorf (Unterfranken, Bayern) und arbeitet über ein bundesweites Netzwerk an Kooperationsbüros deutschlandweit.\"}}]}</script>"
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "Gewässerschutz | Sachverständiger & Ingenieurbüro Weierich",
+    "description": "Öffentlich bestellter und vereidigter Sachverständiger für Gewässerschutz: gewässerökologische Gutachten, EU-Wasserrahmenrichtlinie, Renaturierung und Gewässerplanung – deutschlandweit. Jetzt unverbindlich anfragen."
+  }
+}
