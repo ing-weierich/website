@@ -1,0 +1,31 @@
+---
+import { withBase, type ImageData } from '../../lib/content';
+
+interface Props {
+    data: {
+        headline?: string;
+        subheadline?: string;
+        image?: ImageData;
+    };
+}
+
+const { data } = Astro.props;
+const image = data.image;
+---
+
+<div class="relative text-white">
+    <div class="hidden xl:block absolute bottom-0 left-0 opacity-[0.11]">
+        <img class="-translate-x-[30px] translate-y-[50px] w-full h-auto" src={withBase('/logo.svg')} alt="" />
+    </div>
+    <div class="px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto xl:flex">
+        <div class="mb-[40px] xl:w-1/2 xl:pr-[54px]">
+            <div class="font-headline font-bold text-[24px] leading-[48px] uppercase xl:text-[48px] xl:leading-[80px]">{data.headline}</div>
+            {data.subheadline && (
+                <div class="font-headline font-medium text-[18px] leading-[28px] uppercase mt-[20px] xl:mt-[40px] xl:text-[24px] xl:leading-[40px]">{data.subheadline}</div>
+            )}
+        </div>
+        <div class="xl:w-1/2 xl:pl-[54px] xl:translate-y-[150px]">
+            {image && <img class="w-full h-auto" src={withBase(image.url)} alt={image.title} />}
+        </div>
+    </div>
+</div>

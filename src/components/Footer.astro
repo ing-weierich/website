@@ -1,18 +1,21 @@
-{{ define "footer" }}
+---
+import { currentYear, navFooter, toURL, withBase } from '../lib/content';
+---
+
 <footer>
     <div class="footer-top">
-        <img class="footer-fish" src="/fish.svg" alt="" />
+        <img class="footer-fish" src={withBase('/fish.svg')} alt="" />
         <div class="footer-top-inner">
             <div class="footer-box">
                 <div class="footer-headline">
                     Fundiertes Fachwissen und ein H&ouml;chstma&szlig; an <strong>professioneller Bearbeitung</strong>
                 </div>
                 <a class="footer-link" href="tel:015115381245">
-                    <img class="footer-icon" src="/phone_white.svg" alt="Handy" />
+                    <img class="footer-icon" src={withBase('/phone_white.svg')} alt="Handy" />
                     <span class="footer-data">0151 / 15 38 12 45</span>
                 </a>
                 <a class="footer-link" href="mailto:info@Ing-Weierich.de">
-                    <img class="footer-icon" src="/mail_white.svg" alt="E-Mail" />
+                    <img class="footer-icon" src={withBase('/mail_white.svg')} alt="E-Mail" />
                     <span class="footer-data">info@Ing-Weierich.de</span>
                 </a>
             </div>
@@ -24,12 +27,9 @@
     </div>
 
     <div class="footer-bottom">
-        <div class="footer-copy">&copy;Ingenieurb&uuml;ro Weierich {{ .CurrentYear }}</div>
+        <div class="footer-copy">&copy;Ingenieurb&uuml;ro Weierich {currentYear}</div>
         <nav class="footer-nav">
-            {{ range .NavFooter }}
-                <a class="footer-nav-item" href="{{ toURL .Slug }}">{{ .Title }}</a>
-            {{ end }}
+            {navFooter.map((item) => <a class="footer-nav-item" href={toURL(item.slug)}>{item.title}</a>)}
         </nav>
     </div>
 </footer>
-{{ end }}

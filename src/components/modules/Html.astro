@@ -1,0 +1,13 @@
+---
+interface Props {
+    data: {
+        html?: string;
+    };
+}
+
+const { data } = Astro.props;
+---
+
+<div class="module-html">
+    {data.html && <Fragment set:html={data.html} />}
+</div>

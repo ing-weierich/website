@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/content';
+---
+
+<BaseLayout title="Seite nicht gefunden | Ingenieurb&uuml;ro Weierich">
+    <section class="py-[20px] xl:py-[50px]" style="background-color: #f0f0f0;">
+        <div class="px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto">
+            <div class="font-headline font-bold text-[24px] leading-[44px] uppercase mb-[20px] xl:text-[36px] xl:leading-[64px] xl:mb-[40px]">
+                Seite nicht gefunden
+            </div>
+            <div class="richtext mb-[40px]">
+                <p>Die aufgerufene Seite existiert nicht oder wurde verschoben.</p>
+            </div>
+            <a class="btn-primary" href={withBase('/startseite')}>Zur Startseite</a>
+        </div>
+    </section>
+</BaseLayout>
