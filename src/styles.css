@@ -70,7 +70,34 @@
     }
 
     .desktop-nav {
-        @apply hidden xl:flex;
+        @apply hidden xl:flex xl:items-center;
+    }
+
+    .nav-caret {
+        @apply inline-block ml-[6px] text-[12px] align-middle;
+    }
+
+    .has-dropdown {
+        @apply relative;
+    }
+
+    .dropdown {
+        @apply hidden absolute left-0 top-full min-w-[240px] bg-white py-[10px];
+        box-shadow: 0 10px 30px rgba(1, 16, 25, 0.15);
+        z-index: 20;
+    }
+
+    .has-dropdown:hover .dropdown,
+    .has-dropdown:focus-within .dropdown {
+        display: block;
+    }
+
+    .dropdown-item {
+        @apply block normal-case font-semibold text-[16px] leading-[24px] text-black no-underline whitespace-nowrap px-[20px] py-[12px] hover:bg-grey;
+    }
+
+    .nav-subitem {
+        @apply text-[18px] font-medium opacity-80;
     }
 
     .logo {
@@ -127,6 +154,10 @@
 
     .btn-primary {
         @apply inline-block text-white bg-blue h-[53px] leading-[53px] px-[20px] font-semibold;
+    }
+
+    .btn-inverted {
+        @apply inline-block text-blue bg-white h-[53px] leading-[53px] px-[20px] font-semibold;
     }
 
     .richtext p {
@@ -267,6 +298,57 @@
     .module-html a,
     .module-html p a {
         color: #011019;
+    }
+
+    .module-html a.btn-primary {
+        color: #ffffff;
+    }
+
+    .module-html a.btn-inverted {
+        color: #02324d;
+    }
+
+    .steps {
+        @apply grid grid-cols-1 gap-[20px] md:grid-cols-2 xl:grid-cols-4;
+    }
+
+    .step {
+        @apply bg-grey px-[24px] py-[32px] h-full;
+    }
+
+    .step-number {
+        @apply font-headline font-bold text-[36px] leading-[40px] text-blue mb-[14px];
+    }
+
+    .step-title {
+        @apply font-headline font-bold text-[18px] leading-[26px] uppercase mb-[10px];
+    }
+
+    .step-text {
+        @apply text-[16px] leading-[26px];
+    }
+
+    .usp-band {
+        @apply grid grid-cols-1 gap-[28px] md:grid-cols-2 xl:grid-cols-4;
+        color: #ffffff;
+    }
+
+    .usp {
+        @apply pt-[20px];
+        border-top: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .usp-number {
+        @apply font-headline font-bold text-[36px] leading-[40px] mb-[12px];
+    }
+
+    .usp-title {
+        @apply font-headline font-bold text-[18px] leading-[26px] uppercase mb-[10px];
+    }
+
+    .usp-text {
+        @apply text-[16px] leading-[26px];
+        opacity: 0.9;
     }
 
     .slider {

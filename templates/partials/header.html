@@ -3,6 +3,9 @@
     <nav class="mobile-nav" data-nav>
         {{ range .NavMain }}
             <a class="nav-item" href="{{ toURL .Slug }}">{{ .Title }}</a>
+            {{ range .Children }}
+                <a class="nav-item nav-subitem" href="{{ toURL .Slug }}">{{ .Title }}</a>
+            {{ end }}
         {{ end }}
     </nav>
 
@@ -13,7 +16,18 @@
 
         <nav class="desktop-nav">
             {{ range .NavMain }}
-                <a class="nav-item nav-item-desktop" href="{{ toURL .Slug }}">{{ .Title }}</a>
+                {{ if .Children }}
+                    <div class="nav-item nav-item-desktop has-dropdown">
+                        <a href="{{ toURL .Slug }}">{{ .Title }}<span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+                        <div class="dropdown">
+                            {{ range .Children }}
+                                <a class="dropdown-item" href="{{ toURL .Slug }}">{{ .Title }}</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ else }}
+                    <a class="nav-item nav-item-desktop" href="{{ toURL .Slug }}">{{ .Title }}</a>
+                {{ end }}
             {{ end }}
         </nav>
 

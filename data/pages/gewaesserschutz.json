@@ -82,6 +82,79 @@
       },
       "modules": [
         {
+          "type": "headlines",
+          "data": {
+            "headline": "so läuft ihre zusammenarbeit",
+            "subheadline": "In vier Schritten zum Ergebnis"
+          }
+        },
+        {
+          "type": "html",
+          "data": {
+            "html": "<div class=\"steps\">\n<div class=\"step\"><div class=\"step-number\">01</div><div class=\"step-title\">Erstgespräch</div><div class=\"step-text\">Sie schildern uns Ihr Gewässer oder Vorhaben. Wir klären Ziel, Rahmen und die rechtlichen Anforderungen – unverbindlich und kostenfrei.</div></div>\n<div class=\"step\"><div class=\"step-number\">02</div><div class=\"step-title\">Erhebung &amp; Bewertung</div><div class=\"step-text\">Kartierung, Vermessung und Bestandserhebung vor Ort, gefolgt von einer belastbaren Bewertung nach WRRL und WHG.</div></div>\n<div class=\"step\"><div class=\"step-number\">03</div><div class=\"step-title\">Gutachten &amp; Planung</div><div class=\"step-text\">Gerichtsfeste Gutachten, Fachbeiträge und Planungen – inklusive der Unterlagen für Ihr Genehmigungsverfahren.</div></div>\n<div class=\"step\"><div class=\"step-number\">04</div><div class=\"step-title\">Umsetzung &amp; Begleitung</div><div class=\"step-text\">Ökologische Baubegleitung und Funktionskontrollen begleiten Ihr Vorhaben zuverlässig bis zum Abschluss.</div></div>\n</div>"
+          }
+        }
+      ]
+    },
+    {
+      "background": {
+        "color": "#f0f0f0",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "headlines",
+          "data": {
+            "headline": "für wen wir arbeiten",
+            "subheadline": "Öffentliche Hand, Wirtschaft und Fischerei"
+          }
+        },
+        {
+          "type": "cards",
+          "data": {
+            "cards": [
+              {
+                "headline": "Kommunen & Behörden",
+                "text": "<p>Wasserwirtschaftsämter, Landratsämter und Gemeinden unterstützen wir bei Genehmigungsverfahren, der Umsetzung der Wasserrahmenrichtlinie und der Gewässerunterhaltung.</p>"
+              },
+              {
+                "headline": "Unternehmen & Industrie",
+                "text": "<p>Betreiber von Wasserkraft-, Pump- und Einleitungsanlagen begleiten wir bei Gutachten, Funktionskontrollen und der Erfüllung wasserrechtlicher Auflagen.</p>"
+              },
+              {
+                "headline": "Fischereiberechtigte & Verbände",
+                "text": "<p>Für Fischereiberechtigte und Verbände erstellen wir fischereiliche Schadensgutachten, Besatz- und Sanierungskonzepte sowie Bestandserhebungen.</p>"
+              },
+              {
+                "headline": "Planungs- & Ingenieurbüros",
+                "text": "<p>Als fachlicher Partner liefern wir gewässerökologische Beiträge, Kartierungen und Bewertungen für größere Infrastruktur- und Bauvorhaben.</p>"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "background": {
+        "color": "#02324D",
+        "noPadding": false
+      },
+      "modules": [
+        {
+          "type": "html",
+          "data": {
+            "html": "<div class=\"text-white\">\n<div class=\"font-headline font-bold text-[24px] leading-[36px] uppercase mb-[10px] xl:text-[36px]\">Warum Ingenieurbüro Weierich</div>\n<p class=\"text-[18px] leading-[28px] mb-[40px] xl:text-[20px]\">Fachliche Tiefe, rechtliche Sicherheit und Erfahrung aus über einem Jahrzehnt Gewässerschutz.</p>\n<div class=\"usp-band\">\n<div class=\"usp\"><div class=\"usp-number\">✓</div><div class=\"usp-title\">Öffentlich bestellt &amp; vereidigt</div><div class=\"usp-text\">Sachverständiger für Gewässerschutz der IHK Würzburg-Schweinfurt.</div></div>\n<div class=\"usp\"><div class=\"usp-number\">§</div><div class=\"usp-title\">Gerichtsfeste Gutachten</div><div class=\"usp-text\">Belastbare Grundlagen für Behörden, Gerichte und Genehmigungsverfahren.</div></div>\n<div class=\"usp\"><div class=\"usp-number\">2011</div><div class=\"usp-title\">Erfahrung seit 2011</div><div class=\"usp-text\">Zahlreiche Projekte an Fließgewässern, Seen und Teichen.</div></div>\n<div class=\"usp\"><div class=\"usp-number\">DE</div><div class=\"usp-title\">Bundesweit tätig</div><div class=\"usp-text\">Sitz in Unterfranken, deutschlandweites Netzwerk an Kooperationsbüros.</div></div>\n</div>\n</div>"
+          }
+        }
+      ]
+    },
+    {
+      "background": {
+        "color": "#ffffff",
+        "noPadding": false
+      },
+      "modules": [
+        {
           "type": "accordions",
           "data": {
             "headline": "Häufige Fragen zum Gewässerschutz",
@@ -120,7 +193,7 @@
         {
           "type": "html",
           "data": {
-            "html": "<div class=\"text-white text-center px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto\">\n<div class=\"font-headline font-bold text-[24px] leading-[36px] uppercase mb-[20px] xl:text-[36px]\">In wenigen Sekunden zur Anfrage</div>\n<p class=\"text-[18px] leading-[28px] mb-[40px] xl:text-[20px]\">Beschreiben Sie uns kurz Ihr Gewässer oder Ihr Vorhaben – wir melden uns unverbindlich mit den nächsten Schritten.</p>\n<div class=\"mb-[20px]\"><a class=\"btn-primary\" href=\"mailto:info@Ing-Weierich.de?subject=Anfrage%20Gew%C3%A4sserschutz\" data-analytics-event=\"gewaesserschutz_anfrage_email\">Jetzt per E-Mail anfragen</a></div>\n<div><a class=\"btn-primary\" href=\"tel:015115381245\" data-analytics-event=\"gewaesserschutz_anfrage_telefon\">Direkt anrufen: 0151 / 15 38 12 45</a></div>\n</div>\n<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"ProfessionalService\",\"name\":\"Ingenieurbüro Weierich – Sachverständiger für Gewässerschutz\",\"description\":\"Öffentlich bestellter und vereidigter Sachverständiger für Gewässerschutz. Gewässerökologische Gutachten, Wasserrahmenrichtlinie, Renaturierung und Gewässerplanung.\",\"url\":\"https://www.ing-weierich.de/gewaesserschutz\",\"telephone\":\"+49-151-15381245\",\"email\":\"info@Ing-Weierich.de\",\"founder\":\"Dipl. Ing. Martin Weierich\",\"areaServed\":\"DE\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Rathausstraße 21\",\"postalCode\":\"97514\",\"addressLocality\":\"Tretzendorf\",\"addressCountry\":\"DE\"},\"knowsAbout\":[\"Gewässerschutz\",\"Gewässerökologie\",\"Gewässerplanung\",\"EU-Wasserrahmenrichtlinie\",\"Renaturierung\",\"Fischaufstiegsanlagen\"]}</script>\n<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Was macht ein Sachverständiger für Gewässerschutz?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ein öffentlich bestellter und vereidigter Sachverständiger für Gewässerschutz bewertet den ökologischen Zustand von Fließgewässern, Seen und Teichen, erstellt gerichtsfeste Gutachten und begleitet Planungen und Genehmigungsverfahren rund um den Schutz und die Entwicklung von Gewässern.\"}},{\"@type\":\"Question\",\"name\":\"Wann brauche ich ein gewässerökologisches Gutachten?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ein Gutachten ist unter anderem bei UVP-, FFH- und speziellen artenschutzrechtlichen Prüfungen (SaP), bei fischereilichen Schadensfällen, bei Einleitungen in Oberflächengewässer sowie bei Eingriffen an technischen Bauwerken wie Wasserkraftanlagen oder Pumpwerken erforderlich.\"}},{\"@type\":\"Question\",\"name\":\"Was verlangt die EU-Wasserrahmenrichtlinie (WRRL)?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Die EU-Wasserrahmenrichtlinie fordert für Oberflächengewässer einen guten ökologischen Zustand. Wir erstellen die dafür nötigen Fachbeiträge nach WRRL und WHG, darunter Gewässerstrukturkartierung sowie Bewertungen von Fischen, Makrozoobenthos und Makrophyten.\"}},{\"@type\":\"Question\",\"name\":\"Übernehmen Sie auch die Planung von Renaturierungen?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ja. Wir planen Renaturierungsmaßnahmen, naturnahe Fischaufstiegsanlagen und Teichanlagen, erarbeiten wasserrechtliche Genehmigungen sowie Gewässerentwicklungspläne und begleiten die Umsetzung bis zur ökologischen Baubegleitung.\"}},{\"@type\":\"Question\",\"name\":\"In welchen Regionen sind Sie tätig?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Das Ingenieurbüro Weierich hat seinen Sitz in Tretzendorf (Unterfranken, Bayern) und arbeitet über ein bundesweites Netzwerk an Kooperationsbüros deutschlandweit.\"}}]}</script>"
+            "html": "<div class=\"text-white text-center px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto\">\n<div class=\"font-headline font-bold text-[24px] leading-[36px] uppercase mb-[20px] xl:text-[36px]\">In wenigen Sekunden zur Anfrage</div>\n<p class=\"text-[18px] leading-[28px] mb-[40px] xl:text-[20px]\">Beschreiben Sie uns kurz Ihr Gewässer oder Ihr Vorhaben – wir melden uns unverbindlich mit den nächsten Schritten.</p>\n<div class=\"mb-[20px]\"><a class=\"btn-inverted\" href=\"mailto:info@Ing-Weierich.de?subject=Anfrage%20Gew%C3%A4sserschutz\" data-analytics-event=\"gewaesserschutz_anfrage_email\">Jetzt per E-Mail anfragen</a></div>\n<div><a class=\"btn-inverted\" href=\"tel:015115381245\" data-analytics-event=\"gewaesserschutz_anfrage_telefon\">Direkt anrufen: 0151 / 15 38 12 45</a></div>\n</div>\n<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"ProfessionalService\",\"name\":\"Ingenieurbüro Weierich – Sachverständiger für Gewässerschutz\",\"description\":\"Öffentlich bestellter und vereidigter Sachverständiger für Gewässerschutz. Gewässerökologische Gutachten, Wasserrahmenrichtlinie, Renaturierung und Gewässerplanung.\",\"url\":\"https://www.ing-weierich.de/gewaesserschutz\",\"telephone\":\"+49-151-15381245\",\"email\":\"info@Ing-Weierich.de\",\"founder\":\"Dipl. Ing. Martin Weierich\",\"areaServed\":\"DE\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"Rathausstraße 21\",\"postalCode\":\"97514\",\"addressLocality\":\"Tretzendorf\",\"addressCountry\":\"DE\"},\"knowsAbout\":[\"Gewässerschutz\",\"Gewässerökologie\",\"Gewässerplanung\",\"EU-Wasserrahmenrichtlinie\",\"Renaturierung\",\"Fischaufstiegsanlagen\"]}</script>\n<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Was macht ein Sachverständiger für Gewässerschutz?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ein öffentlich bestellter und vereidigter Sachverständiger für Gewässerschutz bewertet den ökologischen Zustand von Fließgewässern, Seen und Teichen, erstellt gerichtsfeste Gutachten und begleitet Planungen und Genehmigungsverfahren rund um den Schutz und die Entwicklung von Gewässern.\"}},{\"@type\":\"Question\",\"name\":\"Wann brauche ich ein gewässerökologisches Gutachten?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ein Gutachten ist unter anderem bei UVP-, FFH- und speziellen artenschutzrechtlichen Prüfungen (SaP), bei fischereilichen Schadensfällen, bei Einleitungen in Oberflächengewässer sowie bei Eingriffen an technischen Bauwerken wie Wasserkraftanlagen oder Pumpwerken erforderlich.\"}},{\"@type\":\"Question\",\"name\":\"Was verlangt die EU-Wasserrahmenrichtlinie (WRRL)?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Die EU-Wasserrahmenrichtlinie fordert für Oberflächengewässer einen guten ökologischen Zustand. Wir erstellen die dafür nötigen Fachbeiträge nach WRRL und WHG, darunter Gewässerstrukturkartierung sowie Bewertungen von Fischen, Makrozoobenthos und Makrophyten.\"}},{\"@type\":\"Question\",\"name\":\"Übernehmen Sie auch die Planung von Renaturierungen?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Ja. Wir planen Renaturierungsmaßnahmen, naturnahe Fischaufstiegsanlagen und Teichanlagen, erarbeiten wasserrechtliche Genehmigungen sowie Gewässerentwicklungspläne und begleiten die Umsetzung bis zur ökologischen Baubegleitung.\"}},{\"@type\":\"Question\",\"name\":\"In welchen Regionen sind Sie tätig?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Das Ingenieurbüro Weierich hat seinen Sitz in Tretzendorf (Unterfranken, Bayern) und arbeitet über ein bundesweites Netzwerk an Kooperationsbüros deutschlandweit.\"}}]}</script>"
           }
         }
       ]
