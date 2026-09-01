@@ -154,10 +154,20 @@
 
     .btn-primary {
         @apply inline-block text-white bg-blue h-[53px] leading-[53px] px-[20px] font-semibold;
+        transition: opacity 0.2s ease;
+    }
+
+    .btn-primary:hover {
+        opacity: 0.9;
     }
 
     .btn-inverted {
         @apply inline-block text-blue bg-white h-[53px] leading-[53px] px-[20px] font-semibold;
+        transition: opacity 0.2s ease;
+    }
+
+    .btn-inverted:hover {
+        opacity: 0.9;
     }
 
     .richtext p {
@@ -308,12 +318,26 @@
         color: #02324d;
     }
 
+    /* Paragraphs/lists inherit dark from the base `p` rule even inside a
+       light-on-dark block; force white so text on the blue sections stays
+       readable (fixes "blau auf blau"). */
+    .text-white p,
+    .text-white li {
+        color: #ffffff;
+    }
+
     .steps {
         @apply grid grid-cols-1 gap-[20px] md:grid-cols-2 xl:grid-cols-4;
     }
 
     .step {
-        @apply bg-grey px-[24px] py-[32px] h-full;
+        @apply bg-grey px-[24px] py-[32px] h-full rounded-[4px] border-t-[3px] border-blue;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .step:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(2, 50, 77, 0.12);
     }
 
     .step-number {
