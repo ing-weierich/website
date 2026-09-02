@@ -84,7 +84,9 @@ unter dem Basispfad ins Leere zeigen.
 
 ### Umzug auf eine eigene Domain
 
-1. `astro.config.mjs`: `site` auf die Domain setzen, `base: '/'`.
+1. `astro.config.mjs`: `site` auf die Domain setzen, `base: '/'`. Damit entfällt
+   automatisch auch das `noindex`-Meta-Tag, das die Testauslieferung unter
+   `/website/` aus dem Suchindex hält (siehe `BaseLayout.astro`).
 2. `public/CNAME` mit der Domain anlegen (eine Zeile, z.B. `www.ing-weierich.de`).
 3. DNS auf GitHub Pages zeigen lassen und die Domain unter *Settings → Pages* eintragen.
 
