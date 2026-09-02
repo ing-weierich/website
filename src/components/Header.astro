@@ -4,7 +4,14 @@ import { navMain, toURL, withBase } from '../lib/content';
 
 <header class="header" data-header data-open="false">
     <nav class="mobile-nav" data-nav>
-        {navMain.map((item) => <a class="nav-item" href={toURL(item.slug)}>{item.title}</a>)}
+        {navMain.map((item) => (
+            <>
+                <a class="nav-item" href={toURL(item.slug)}>{item.title}</a>
+                {(item.children ?? []).map((child) => (
+                    <a class="nav-item nav-subitem" href={toURL(child.slug)}>{child.title}</a>
+                ))}
+            </>
+        ))}
     </nav>
 
     <div class="header-inner">
@@ -13,7 +20,20 @@ import { navMain, toURL, withBase } from '../lib/content';
         </a>
 
         <nav class="desktop-nav">
-            {navMain.map((item) => <a class="nav-item nav-item-desktop" href={toURL(item.slug)}>{item.title}</a>)}
+            {navMain.map((item) =>
+                item.children && item.children.length > 0 ? (
+                    <div class="nav-item nav-item-desktop has-dropdown">
+                        <a href={toURL(item.slug)}>{item.title}<span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+                        <div class="dropdown">
+                            {item.children.map((child) => (
+                                <a class="dropdown-item" href={toURL(child.slug)}>{child.title}</a>
+                            ))}
+                        </div>
+                    </div>
+                ) : (
+                    <a class="nav-item nav-item-desktop" href={toURL(item.slug)}>{item.title}</a>
+                )
+            )}
         </nav>
 
         <button class="burger" type="button" aria-label="Navigation" data-nav-toggle>

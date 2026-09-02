@@ -1,0 +1,53 @@
+---
+// Markup aus PR #7 (templates/partials/cookie-consent.html).
+// Die Kategorie-Schalter rendert src/scripts/cookie-consent.ts aus den
+// registrierten Kategorien.
+---
+
+<div
+    class="cookie-consent"
+    data-cookie-consent
+    role="dialog"
+    aria-modal="false"
+    aria-labelledby="cookie-consent-title"
+    aria-describedby="cookie-consent-desc"
+    hidden
+>
+    <div class="cookie-consent-inner">
+        <div class="cookie-consent-text">
+            <h2 class="cookie-consent-title" id="cookie-consent-title">Datenschutz-Einstellungen</h2>
+            <p class="cookie-consent-desc" id="cookie-consent-desc">
+                Wir verwenden Cookies, um diese Website bereitzustellen und zu verbessern.
+                Notwendige Cookies sind f&uuml;r den Betrieb erforderlich, andere sind optional
+                und werden erst mit Ihrer Einwilligung gesetzt.
+            </p>
+        </div>
+
+        <div class="cookie-consent-options" id="cookie-consent-options" data-cookie-options hidden></div>
+
+        <div class="cookie-consent-actions">
+            <button
+                type="button"
+                class="cookie-btn cookie-btn-secondary"
+                data-cookie-toggle-options
+                aria-expanded="false"
+                aria-controls="cookie-consent-options"
+            >
+                Einstellungen
+            </button>
+            <button type="button" class="cookie-btn cookie-btn-secondary" data-cookie-reject>
+                Alle ablehnen
+            </button>
+            <button type="button" class="cookie-btn cookie-btn-secondary" data-cookie-save hidden>
+                Auswahl speichern
+            </button>
+            <button type="button" class="cookie-btn cookie-btn-primary" data-cookie-accept>
+                Alle akzeptieren
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    import '../scripts/cookie-consent';
+</script>

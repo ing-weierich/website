@@ -19,6 +19,32 @@ public/                  Assets, Fonts, Favicons (werden 1:1 nach dist/ kopiert)
 Ein neuer Modultyp braucht eine Komponente in `src/components/modules/` und einen Eintrag
 in der `modules`-Map in `src/components/PageSections.astro`.
 
+Tailwind scannt auch `data/**/*.json` — Klassen, die nur im HTML der `html`-Module
+vorkommen (z.B. `.steps`, `.usp-band` auf der Gewässerschutz-Seite), bleiben dadurch
+im Build erhalten.
+
+## Cookie-Banner und Analytics
+
+`src/scripts/cookie-consent.ts` verwaltet die Einwilligungen und rendert die
+Kategorie-Schalter in [CookieConsent.astro](src/components/CookieConsent.astro). Die
+Entscheidung liegt im `localStorage` unter `cookie-consent`. Ein Element mit dem Attribut
+`data-cookie-open` (z.B. ein Footer-Link) öffnet die Einstellungen erneut.
+
+Weitere Kategorien meldet man über die API an — das Analytics-Skript ist genau so
+angebunden:
+
+```ts
+import consent from './cookie-consent';
+
+consent.register({ id: 'maps', title: 'Karten', description: '…' });
+consent.onConsent('maps', () => { /* erst jetzt laden */ });
+```
+
+Google Analytics lädt ausschließlich nach Einwilligung in die Kategorie "Statistik".
+Die Measurement-ID kommt aus `PUBLIC_GA_MEASUREMENT_ID` (siehe `.env.example`); ohne
+gesetzte ID wird `gtag.js` nicht geladen. Für den Pages-Build die Variable im Workflow
+aus einer Repository-Variable setzen.
+
 ## Lokale Entwicklung
 
 Node-Version steht in `.nvmrc` (Node 22):
