@@ -245,6 +245,10 @@
         margin-left: 0;
     }
 
+    .footer-nav-item[hidden] {
+        display: none;
+    }
+
     .accordion-item {
         @apply bg-white mb-[1px];
     }

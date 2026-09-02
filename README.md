@@ -31,6 +31,11 @@ Entscheidung liegt im `localStorage` unter `cookie-consent`. Jedes Element mit d
 `data-cookie-open` öffnet die Einstellungen erneut — im Footer sitzt dafür der Button
 "Cookie-Einstellungen".
 
+Banner und Footer-Button erscheinen nur, wenn mindestens eine **optionale** Kategorie
+registriert ist. Ist nur die notwendige Kategorie vorhanden — etwa weil keine
+`PUBLIC_GA_MEASUREMENT_ID` gesetzt ist — speichert die Seite nichts Einwilligungspflichtiges,
+und es wird kein Banner gezeigt.
+
 Weitere Kategorien meldet man über die API an — das Analytics-Skript ist genau so
 angebunden:
 

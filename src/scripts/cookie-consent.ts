@@ -110,6 +110,13 @@ const notifyAll = () => {
     categories.forEach((category) => notify(category.id));
 };
 
+/**
+ * Gibt es überhaupt etwas einzuwilligen? Solange nur die notwendige Kategorie
+ * registriert ist, speichert die Seite nichts Einwilligungspflichtiges — dann
+ * wird weder ein Banner gezeigt noch der "Cookie-Einstellungen"-Opener.
+ */
+const hasOptionalCategories = (): boolean => categories.some((category) => !category.required);
+
 // --- DOM ---------------------------------------------------------------------
 
 const els: {
@@ -263,12 +270,19 @@ const bindEvents = () => {
         });
     }
     // Jedes Element mit [data-cookie-open] öffnet die Einstellungen erneut,
-    // z.B. ein "Cookie-Einstellungen"-Link im Footer.
+    // z.B. der "Cookie-Einstellungen"-Button im Footer.
     document.querySelectorAll('[data-cookie-open]').forEach((trigger) => {
         trigger.addEventListener('click', (event) => {
             event.preventDefault();
             api.openSettings();
         });
+    });
+};
+
+const updateOpeners = () => {
+    const visible = hasOptionalCategories();
+    document.querySelectorAll<HTMLElement>('[data-cookie-open]').forEach((trigger) => {
+        trigger.hidden = !visible;
     });
 };
 
@@ -278,7 +292,8 @@ const render = () => {
     }
     rendered = true;
     bindEvents();
-    if (choices === null) {
+    updateOpeners();
+    if (choices === null && hasOptionalCategories()) {
         showBanner();
     } else {
         renderOptions();
@@ -305,7 +320,11 @@ export const api: CookieConsentApi = {
         }
         if (rendered) {
             renderOptions();
+            updateOpeners();
             notify(category.id);
+            if (choices === null && hasOptionalCategories()) {
+                showBanner();
+            }
         }
         return api;
     },
@@ -334,7 +353,7 @@ export const api: CookieConsentApi = {
         };
     },
     openSettings() {
-        if (!rendered) {
+        if (!rendered || !hasOptionalCategories()) {
             return;
         }
         showBanner();

@@ -23,18 +23,22 @@ const PLACEHOLDER_ID = 'G-XXXXXXXXXX';
 const MEASUREMENT_ID: string =
     window.GA_MEASUREMENT_ID || import.meta.env.PUBLIC_GA_MEASUREMENT_ID || PLACEHOLDER_ID;
 
-// Kategorie in den Consent-Einstellungen anmelden. Der Banner ist
-// kategorie-agnostisch; das hier ist der gesamte Erweiterungspunkt.
-consent.register({
-    id: 'analytics',
-    title: 'Statistik',
-    description:
-        'Hilft uns mit Google Analytics zu verstehen, wie die Website genutzt wird. ' +
-        'Wird erst nach Ihrer Einwilligung geladen.',
-    required: false,
-});
-
 const idConfigured = Boolean(MEASUREMENT_ID) && MEASUREMENT_ID !== PLACEHOLDER_ID;
+
+// Ohne konfigurierte Measurement-ID passiert hier nichts: keine Kategorie, kein
+// Banner, kein Speichern im Endgerät. Erst mit ID gibt es etwas einzuwilligen.
+if (idConfigured) {
+    // Kategorie in den Consent-Einstellungen anmelden. Der Banner ist
+    // kategorie-agnostisch; das hier ist der gesamte Erweiterungspunkt.
+    consent.register({
+        id: 'analytics',
+        title: 'Statistik',
+        description:
+            'Hilft uns mit Google Analytics zu verstehen, wie die Website genutzt wird. ' +
+            'Wird erst nach Ihrer Einwilligung geladen.',
+        required: false,
+    });
+}
 
 let started = false;
 
@@ -81,13 +85,6 @@ const start = () => {
     window.gtag = gtag;
     trackBaseEvents();
 
-    if (!idConfigured) {
-        // Einwilligung liegt vor, aber es ist noch keine echte Property
-        // konfiguriert — gtag.js nicht mit ungültiger ID laden.
-        console.warn('[analytics] Consent granted, but no Google Analytics ID is configured.');
-        return;
-    }
-
     window.gtag('js', new Date());
     window.gtag('config', MEASUREMENT_ID);
 
@@ -99,4 +96,6 @@ const start = () => {
 
 // Erst laden, wenn in die Kategorie eingewilligt wurde (feuert sofort, wenn
 // die Einwilligung aus einem früheren Besuch gespeichert ist).
-consent.onConsent('analytics', start);
+if (idConfigured) {
+    consent.onConsent('analytics', start);
+}
