@@ -27,8 +27,9 @@ im Build erhalten.
 
 `src/scripts/cookie-consent.ts` verwaltet die Einwilligungen und rendert die
 Kategorie-Schalter in [CookieConsent.astro](src/components/CookieConsent.astro). Die
-Entscheidung liegt im `localStorage` unter `cookie-consent`. Ein Element mit dem Attribut
-`data-cookie-open` (z.B. ein Footer-Link) öffnet die Einstellungen erneut.
+Entscheidung liegt im `localStorage` unter `cookie-consent`. Jedes Element mit dem Attribut
+`data-cookie-open` öffnet die Einstellungen erneut — im Footer sitzt dafür der Button
+"Cookie-Einstellungen".
 
 Weitere Kategorien meldet man über die API an — das Analytics-Skript ist genau so
 angebunden:

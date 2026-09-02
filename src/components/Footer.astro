@@ -30,6 +30,7 @@ import { currentYear, navFooter, toURL, withBase } from '../lib/content';
         <div class="footer-copy">&copy;Ingenieurb&uuml;ro Weierich {currentYear}</div>
         <nav class="footer-nav">
             {navFooter.map((item) => <a class="footer-nav-item" href={toURL(item.slug)}>{item.title}</a>)}
+            <button class="footer-nav-item" type="button" data-cookie-open>Cookie-Einstellungen</button>
         </nav>
     </div>
 </footer>
