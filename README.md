@@ -47,9 +47,9 @@ consent.onConsent('maps', () => { /* erst jetzt laden */ });
 ```
 
 Google Analytics lädt ausschließlich nach Einwilligung in die Kategorie "Statistik".
-Die Measurement-ID kommt aus `PUBLIC_GA_MEASUREMENT_ID` (siehe `.env.example`); ohne
-gesetzte ID wird `gtag.js` nicht geladen. Für den Pages-Build die Variable im Workflow
-aus einer Repository-Variable setzen.
+Die Measurement-ID kommt aus `PUBLIC_GA_MEASUREMENT_ID` und steht in `.env.production`,
+die nur von `astro build` gelesen wird — `npm run dev` sendet also nie etwas an Google.
+Ohne gesetzte ID wird weder die Kategorie registriert noch `gtag.js` geladen.
 
 ## Lokale Entwicklung
 
