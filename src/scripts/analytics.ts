@@ -86,7 +86,12 @@ const start = () => {
     trackBaseEvents();
 
     window.gtag('js', new Date());
-    window.gtag('config', MEASUREMENT_ID);
+    // Keine Google Signals und keine Werbepersonalisierung — so beschrieben in
+    // der Datenschutzerklärung (Abschnitt Google Analytics).
+    window.gtag('config', MEASUREMENT_ID, {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+    });
 
     const script = document.createElement('script');
     script.async = true;

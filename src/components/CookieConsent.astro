@@ -2,6 +2,7 @@
 // Markup aus PR #7 (templates/partials/cookie-consent.html).
 // Die Kategorie-Schalter rendert src/scripts/cookie-consent.ts aus den
 // registrierten Kategorien.
+import { toURL } from '../lib/content';
 ---
 
 <div
@@ -17,9 +18,10 @@
         <div class="cookie-consent-text">
             <h2 class="cookie-consent-title" id="cookie-consent-title">Datenschutz-Einstellungen</h2>
             <p class="cookie-consent-desc" id="cookie-consent-desc">
-                Wir verwenden Cookies, um diese Website bereitzustellen und zu verbessern.
-                Notwendige Cookies sind f&uuml;r den Betrieb erforderlich, andere sind optional
-                und werden erst mit Ihrer Einwilligung gesetzt.
+                Diese Website setzt selbst keine Cookies. Optionale Dienste wie die Reichweitenmessung
+                werden erst mit Ihrer Einwilligung geladen. Ihre Auswahl k&ouml;nnen Sie jederzeit
+                &uuml;ber &bdquo;Cookie-Einstellungen&ldquo; am Seitenende &auml;ndern. Mehr dazu in unserer
+                <a class="underline" href={toURL('datenschutz')}>Datenschutzerkl&auml;rung</a>.
             </p>
         </div>
 

@@ -372,7 +372,8 @@ api.register({
     id: 'necessary',
     title: 'Notwendig',
     description:
-        'Diese Cookies sind für den Betrieb der Website erforderlich und können nicht deaktiviert werden.',
+        'Speichert Ihre Auswahl in diesen Einstellungen lokal in Ihrem Browser. Dafür werden keine Cookies ' +
+        'gesetzt; diese Kategorie kann nicht deaktiviert werden.',
     required: true,
 });
 
