@@ -1,9 +1,0 @@
-{
-  "buildCommand": "npm run build:all",
-  "outputDirectory": "dist",
-  "framework": null,
-  "rewrites": [
-    { "source": "/", "destination": "/startseite.html" },
-    { "source": "/:path((?!.*\\.).*)", "destination": "/:path.html" }
-  ]
-}

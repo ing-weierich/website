@@ -1,0 +1,71 @@
+---
+import { navMain, toURL, withBase } from '../lib/content';
+---
+
+<header class="header" data-header data-open="false">
+    <nav class="mobile-nav" data-nav>
+        {navMain.map((item) => (
+            <>
+                <a class="nav-item" href={toURL(item.slug)}>{item.title}</a>
+                {(item.children ?? []).map((child) => (
+                    <a class="nav-item nav-subitem" href={toURL(child.slug)}>{child.title}</a>
+                ))}
+            </>
+        ))}
+    </nav>
+
+    <div class="header-inner">
+        <a class="logo-link" href={withBase('/startseite')}>
+            <img class="logo" src={withBase('/logo.svg')} alt="Logo" />
+        </a>
+
+        <nav class="desktop-nav">
+            {navMain.map((item) =>
+                item.children && item.children.length > 0 ? (
+                    <div class="nav-item nav-item-desktop has-dropdown">
+                        <a href={toURL(item.slug)}>{item.title}<span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+                        <div class="dropdown">
+                            {item.children.map((child) => (
+                                <a class="dropdown-item" href={toURL(child.slug)}>{child.title}</a>
+                            ))}
+                        </div>
+                    </div>
+                ) : (
+                    <a class="nav-item nav-item-desktop" href={toURL(item.slug)}>{item.title}</a>
+                )
+            )}
+        </nav>
+
+        <button class="burger" type="button" aria-label="Navigation" data-nav-toggle>
+            <span class="burger-inner">
+                <span class="burger-line burger-line-1"></span>
+                <span class="burger-line burger-line-2"></span>
+                <span class="burger-line burger-line-3"></span>
+            </span>
+        </button>
+    </div>
+</header>
+
+<script>
+    const header = document.querySelector('[data-header]');
+    if (header) {
+        const nav = header.querySelector('[data-nav]');
+        const toggle = header.querySelector('[data-nav-toggle]');
+
+        if (nav && toggle) {
+            const setOpen = (open: boolean) => {
+                header.setAttribute('data-open', open ? 'true' : 'false');
+            };
+
+            toggle.addEventListener('click', () => {
+                setOpen(header.getAttribute('data-open') !== 'true');
+            });
+
+            nav.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    setOpen(false);
+                });
+            });
+        }
+    }
+</script>

@@ -1,0 +1,57 @@
+---
+import { withBase, type ImageData } from '../../lib/content';
+
+interface Props {
+    data: {
+        images?: ImageData[];
+    };
+}
+
+const { data } = Astro.props;
+const images = data.images ?? [];
+---
+
+<div class="slider" data-slider>
+    <button class="slider-btn slider-prev" type="button" aria-label="Vorheriges Bild" data-slider-prev>
+        <img class="slider-icon" src={withBase('/arrow_back_white.svg')} alt="" />
+    </button>
+    <button class="slider-btn slider-next" type="button" aria-label="N&auml;chstes Bild" data-slider-next>
+        <img class="slider-icon" src={withBase('/arrow_forward_white.svg')} alt="" />
+    </button>
+    <div class="slider-track" data-slider-track>
+        {images.map((image) => (
+            <div class="slider-slide" data-slide>
+                <img class="slider-image" src={withBase(image.url)} alt={image.title} />
+            </div>
+        ))}
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('[data-slider]').forEach((slider) => {
+        const track = slider.querySelector<HTMLElement>('[data-slider-track]');
+        const slides = slider.querySelectorAll('[data-slide]');
+        const prev = slider.querySelector('[data-slider-prev]');
+        const next = slider.querySelector('[data-slider-next]');
+
+        if (!track || slides.length === 0 || !prev || !next) {
+            return;
+        }
+
+        let index = 0;
+
+        const update = () => {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        };
+
+        prev.addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            update();
+        });
+
+        next.addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            update();
+        });
+    });
+</script>

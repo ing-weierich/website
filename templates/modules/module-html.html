@@ -1,8 +1,0 @@
-{{ define "module-html" }}
-{{ $data := .Data }}
-<div class="module-html">
-    {{ with index $data "html" }}
-        {{ safeHTML . }}
-    {{ end }}
-</div>
-{{ end }}
