@@ -1,18 +1,26 @@
 {
-  "name": "boilerplate",
-  "version": "1.0.0-beta",
+  "name": "ing-weierich",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
   "engines": {
-    "node": ">=18.x"
+    "node": ">=22.0.0"
   },
   "scripts": {
-    "build:css": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",
-    "build:ssgo": "go run ./main.go",
-    "build:all": "bash scripts/build-all.sh"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^5.13.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.1"
+    "@astrojs/check": "^0.9.10",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.3"
   }
 }

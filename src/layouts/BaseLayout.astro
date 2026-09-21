@@ -1,0 +1,45 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import Analytics from '../components/Analytics.astro';
+import { withBase } from '../lib/content';
+import '../styles/styles.css';
+
+interface Props {
+    title: string;
+    description?: string;
+}
+
+const { title, description } = Astro.props;
+
+// Die Testauslieferung läuft unter einem Unterpfad (base '/website') und soll
+// nicht in den Suchindex — sonst steht der Entwurf gegen die spätere Domain.
+// Beim Umzug wird base '/', damit verschwindet das Tag von selbst.
+const isPreviewDeployment = import.meta.env.BASE_URL !== '/';
+---
+
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{title}</title>
+        {description && <meta name="description" content={description} />}
+        {isPreviewDeployment && <meta name="robots" content="noindex, nofollow" />}
+        <link href={withBase('/fonts.css')} rel="stylesheet" />
+        <link rel="icon" href={withBase('/favicon.ico')} sizes="any" />
+        <link rel="icon" href={withBase('/favicon-32x32.png')} type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href={withBase('/apple-touch-icon.png')} />
+        <link rel="manifest" href={withBase('/site.webmanifest')} />
+    </head>
+    <body>
+        <Header />
+        <main class="pt-[122px] xl:pt-[136px]">
+            <slot />
+        </main>
+        <Footer />
+        <CookieConsent />
+        <Analytics />
+    </body>
+</html>

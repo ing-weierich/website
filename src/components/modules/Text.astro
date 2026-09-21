@@ -1,0 +1,28 @@
+---
+import { toURL } from '../../lib/content';
+
+interface Props {
+    data: {
+        topline?: string;
+        headline?: string;
+        text?: string;
+        button?: { label?: string; href?: string };
+    };
+}
+
+const { data } = Astro.props;
+const button = data.button;
+---
+
+<div class="px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto xl:flex">
+    <div class="xl:flex-1 xl:pr-[40px]">
+        {data.topline && (
+            <div class="text-[20px] leading-[32px] font-bold text-[rgba(2,50,77,0.6)] mb-[16px]">{data.topline}</div>
+        )}
+        <div class="font-headline font-bold text-[24px] leading-[44px] uppercase mb-[20px] xl:text-[36px] xl:leading-[64px] xl:mb-[40px]">{data.headline}</div>
+        {button && <a class="btn-primary mb-[20px]" href={toURL(button.href)}>{button.label}</a>}
+    </div>
+    <div class="xl:flex-1 xl:pl-[40px]">
+        {data.text && <div class="richtext" set:html={data.text} />}
+    </div>
+</div>

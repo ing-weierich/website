@@ -2,7 +2,13 @@
   {
     "title": "Leistungen",
     "slug": "leistungen",
-    "children": []
+    "children": [
+      {
+        "title": "Gewässerschutz",
+        "slug": "gewaesserschutz",
+        "children": []
+      }
+    ]
   },
   {
     "title": "Team",

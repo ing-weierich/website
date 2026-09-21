@@ -1,9 +1,0 @@
-{{ define "module-headlines" }}
-{{ $data := .Data }}
-<div class="text-center px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto">
-    <div class="font-headline font-normal text-[24px] leading-[48px] uppercase xl:text-[48px] xl:leading-[80px]">{{ index $data "headline" }}</div>
-    {{ with index $data "subheadline" }}
-        <div class="font-headline font-bold text-[18px] leading-[28px] uppercase mt-[20px] xl:mt-[40px] xl:text-[24px] xl:leading-[40px]">{{ . }}</div>
-    {{ end }}
-</div>
-{{ end }}

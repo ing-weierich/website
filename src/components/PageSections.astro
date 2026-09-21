@@ -1,0 +1,42 @@
+---
+import type { Section } from '../lib/content';
+import Accordions from './modules/Accordions.astro';
+import Cards from './modules/Cards.astro';
+import Headlines from './modules/Headlines.astro';
+import Html from './modules/Html.astro';
+import ImageText from './modules/ImageText.astro';
+import Slider from './modules/Slider.astro';
+import Stage from './modules/Stage.astro';
+import Text from './modules/Text.astro';
+
+const modules = {
+    stage: Stage,
+    text: Text,
+    'image-text': ImageText,
+    cards: Cards,
+    accordions: Accordions,
+    headlines: Headlines,
+    slider: Slider,
+    html: Html,
+} as const;
+
+type ModuleType = keyof typeof modules;
+
+interface Props {
+    sections: Section[];
+}
+
+const { sections } = Astro.props;
+---
+
+{sections.map((section) => (
+    <section
+        class={section.background.noPadding ? 'py-0' : 'py-[20px] xl:py-[50px]'}
+        style={`background-color: ${section.background.color};`}
+    >
+        {section.modules.map((module) => {
+            const Module = modules[module.type as ModuleType];
+            return Module ? <Module data={module.data} /> : null;
+        })}
+    </section>
+))}

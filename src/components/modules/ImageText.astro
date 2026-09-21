@@ -1,0 +1,25 @@
+---
+import { withBase, type ImageData } from '../../lib/content';
+
+interface Props {
+    data: {
+        text?: string;
+        image?: ImageData;
+    };
+}
+
+const { data } = Astro.props;
+const image = data.image;
+---
+
+<div class="px-[20px] py-[40px] xl:px-0 xl:pt-[50px] xl:pb-[193px] xl:max-w-[1180px] xl:mx-auto">
+    <div class="relative">
+        {image && <img class="w-full h-auto" src={withBase(image.url)} alt={image.title} />}
+        {data.text && (
+            <div
+                class="richtext mt-[20px] xl:mt-0 xl:bg-white xl:absolute xl:bottom-[-143px] xl:left-1/2 xl:-translate-x-1/2 xl:w-[calc(100%-216px)] xl:px-[80px] xl:py-[80px]"
+                set:html={data.text}
+            />
+        )}
+    </div>
+</div>

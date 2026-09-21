@@ -1,0 +1,36 @@
+---
+import { withBase, type ImageData } from '../../lib/content';
+
+interface Card {
+    headline?: string;
+    text?: string;
+    image?: ImageData;
+}
+
+interface Props {
+    data: {
+        cards?: Card[];
+    };
+}
+
+const { data } = Astro.props;
+const cards = data.cards ?? [];
+---
+
+<div class="px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
+        {cards.map((card) => (
+            <div class="bg-white">
+                {card.image && (
+                    <img class="w-full h-[300px] object-cover object-center" src={withBase(card.image.url)} alt={card.image.title} />
+                )}
+                <div class="px-[20px] py-[40px] xl:px-[40px] xl:py-[40px]">
+                    <div class="font-headline font-bold text-[20px] leading-[36px] mb-[20px] xl:text-[24px] xl:leading-[40px]">{card.headline}</div>
+                    <div class="richtext text-[18px] leading-[26px] xl:text-[20px] xl:leading-[24px]">
+                        {card.text && <Fragment set:html={card.text} />}
+                    </div>
+                </div>
+            </div>
+        ))}
+    </div>
+</div>

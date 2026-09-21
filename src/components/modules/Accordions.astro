@@ -1,0 +1,57 @@
+---
+import { withBase } from '../../lib/content';
+
+interface AccordionItem {
+    label?: string;
+    text?: string;
+}
+
+interface Props {
+    data: {
+        headline?: string;
+        items?: AccordionItem[];
+    };
+}
+
+const { data } = Astro.props;
+const items = data.items ?? [];
+---
+
+<div class="px-[20px] py-[40px] xl:px-0 xl:py-[50px] xl:max-w-[1180px] xl:mx-auto">
+    <div class="font-headline font-bold text-[24px] leading-[48px] uppercase mb-[20px]">{data.headline}</div>
+    {items.map((item) => (
+        <div class="accordion-item bg-white mb-[1px]" data-accordion-item>
+            <button class="accordion-head" type="button" data-accordion-toggle>
+                <span class="accordion-label">{item.label}</span>
+                <img class="accordion-icon" src={withBase('/arrow_up_black.svg')} alt="" />
+            </button>
+            {item.text && <div class="accordion-content richtext" set:html={item.text} />}
+        </div>
+    ))}
+</div>
+
+<script>
+    document.querySelectorAll('[data-accordion-item]').forEach((item) => {
+        const toggle = item.querySelector('[data-accordion-toggle]');
+        if (!toggle) {
+            return;
+        }
+
+        toggle.addEventListener('click', () => {
+            const container = item.parentElement;
+            if (container) {
+                container.querySelectorAll('[data-accordion-item]').forEach((other) => {
+                    if (other !== item) {
+                        other.removeAttribute('data-open');
+                    }
+                });
+            }
+
+            if (item.getAttribute('data-open') === 'true') {
+                item.removeAttribute('data-open');
+            } else {
+                item.setAttribute('data-open', 'true');
+            }
+        });
+    });
+</script>
