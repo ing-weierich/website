@@ -61,7 +61,7 @@ npm install
 npm run dev
 ```
 
-Öffnen: `http://localhost:4321/website/` (Basispfad, siehe Deploy).
+Öffnen: `http://localhost:4321/`.
 
 Weitere Skripte: `npm run check` (Astro-/TypeScript-Diagnostics), `npm run preview`
 (baut nicht, sondern serviert den vorhandenen `dist/`-Build).
@@ -76,24 +76,23 @@ Die Ausgabe landet in `dist/`, Vorschau des Builds mit `npm run preview`.
 
 ## Deploy (GitHub Pages)
 
-Deployt wird per GitHub Actions (`.github/workflows/deploy.yml`) — ausgelöst durch Pushes
-auf den Branch `develop` oder manuell über *Actions → Deploy to GitHub Pages → Run workflow*.
-Voraussetzung: unter *Settings → Pages* muss als Source **GitHub Actions** eingestellt sein.
+Gearbeitet wird direkt auf `main`. Deployt wird per GitHub Actions
+(`.github/workflows/deploy.yml`) — ausgelöst durch jeden Push auf `main` oder manuell über
+*Actions → Deploy to GitHub Pages → Run workflow*. Voraussetzung: unter *Settings → Pages*
+ist als Source **GitHub Actions** eingestellt.
 
-Live-URL: `https://ing-weierich.github.io/website/`
+Live-URL: `https://www.ing-weierich.de/`
 
-Weil die Seite unter einem Unterpfad läuft, ist in `astro.config.mjs` `base: '/website'`
-gesetzt. Alle internen Links und Asset-Pfade laufen deshalb über `withBase()` aus
-`src/lib/content.ts` bzw. über `toURL()` — hartkodierte Pfade wie `/logo.svg` würden
-unter dem Basispfad ins Leere zeigen.
+Die eigene Domain ist unter *Settings → Pages → Custom domain* eingetragen (bei einem
+Actions-Deploy wird keine `CNAME`-Datei benötigt). DNS beim Domain-Hoster:
 
-### Umzug auf eine eigene Domain
+- `www` — CNAME auf `ing-weierich.github.io`
+- `@` — A-Records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
+  `185.199.111.153` und AAAA-Records `2606:50c0:8000::153`, `2606:50c0:8001::153`,
+  `2606:50c0:8002::153`, `2606:50c0:8003::153` (GitHub leitet auf `www` weiter)
+- MX- und SPF-Einträge für die E-Mail bleiben unverändert.
 
-1. `astro.config.mjs`: `site` auf die Domain setzen, `base: '/'`. Damit entfällt
-   automatisch auch das `noindex`-Meta-Tag, das die Testauslieferung unter
-   `/website/` aus dem Suchindex hält (siehe `BaseLayout.astro`).
-2. `public/CNAME` mit der Domain anlegen (eine Zeile, z.B. `www.ing-weierich.de`).
-3. DNS auf GitHub Pages zeigen lassen und die Domain unter *Settings → Pages* eintragen.
-
-`withBase()` bleibt dabei unverändert nutzbar — bei `base: '/'` gibt es die Pfade
-unverändert zurück.
+Interne Links und Asset-Pfade laufen über `withBase()` aus `src/lib/content.ts` bzw. über
+`toURL()`. Bei `base: '/'` geben sie die Pfade unverändert zurück; sie bleiben trotzdem
+nötig, falls die Seite wieder unter einem Unterpfad laufen soll. Läuft die Seite unter
+einem Unterpfad, setzt `BaseLayout.astro` automatisch `noindex`.
